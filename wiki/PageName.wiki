@@ -1,0 +1,15 @@
+#summary Unity on Linux x64 distro?
+#labels SubProject-Project1
+
+= Introduction =
+
+Robin Pennock - Wednesday, 5 February 2014, 8:07 PM
+
+
+= Details =
+
+Is anybody else have any issues installing unity on a 64bit linux OS? I'm personally using ubutnu 13.10 x64 and unity doesn't seem to work well with this distro in particular. Closest thing I've found to a solution is here
+
+https://www.youtube.com/watch?v=Q6YzEfHc81k
+
+like most I'm getting the "Error initializing license system". Any ideas? I really don't want to have to use windows...
