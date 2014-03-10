@@ -33,20 +33,20 @@ The Login interface is the first thing user sees when starting game
 
 = Game Mechanics =
  * ==Map==
-All players play on a persistent map
-The map consists of 16807 concentric hexagonal tiles.
-Each player owns tiles and plays to expand the tiles they control.
-The map will utilize a 3-dimensional coordinate system described towards the end of this article: http://keekerdc.com/2011/03/hexagon-grids-coordinate-systems-and-distance-calculations/
-
-   * ==Tiles==
-Each hexagon tile has a Vegetation Capacity between 100 to 1000 Biomass Points.
-Different terrain types have different Vegetation Capacity, i.e. a desert tile has a 100 vegetation biomass unit capacity where a plains tile has 500 and a tile with a river has 1000.
-The amount biomass of vegetation in a player’s personal ecosystem is limited by the sum of the Vegetation Capacity of the tiles they own.
-Players will be able to select tiles from the map screen to view more detailed information. Information presented will depend on ownership of the tile.
-Players will be able to see detailed information about their own ecosystem when selecting tiles they own
-Tiles owned by another player or unowned tiles will only show general information:
-Tile ownership
-Vegetation Capacity
+All players play on a persistent map:
+ # The map consists of 16807 concentric hexagonal tiles.
+ # Each player owns tiles and plays to expand the tiles they control.
+ # <image>
+ # The map will utilize a 3-dimensional coordinate system described towards the end of [http://keekerdc.com/2011/03/hexagon-grids-coordinate-systems-and-distance-calculations/ this article].
+ # Tiles
+   * Each hexagon tile has a Vegetation Capacity between 100 to 1000 Biomass Points.
+     * Different terrain types have different Vegetation Capacity, i.e. a desert tile has a 100 vegetation biomass unit capacity where a plains tile has 500 and a tile with a river has 1000.
+   * The amount biomass of vegetation in a player’s personal ecosystem is limited by the sum of the Vegetation Capacity of the tiles they own.
+   * Players will be able to select tiles from the map screen to view more detailed information. Information presented will depend on ownership of the tile.
+     * Players will be able to see detailed information about their own ecosystem when selecting tiles they own
+     * Tiles owned by another player or unowned tiles will only show general information:
+       * Tile ownership
+       * Vegetation Capacity
 
  * ==Personal Ecosystem Care==
 Players try to maintain a persistent ecosystem of species they can use to conquer other tiles.
