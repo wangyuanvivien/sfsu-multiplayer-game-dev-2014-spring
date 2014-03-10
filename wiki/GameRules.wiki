@@ -1,15 +1,14 @@
 #summary CSC 631 Design Document, detailed game rules.
 
-= Introduction =
+= Executive Summary =
 
  * ==Who we are==
  * ==Why are we making this game==
 
-= Details =
+= Login =
 
-=Login=
-=Account Creation=
-=Game Mechanics=
+= Account Creation =
+= Game Mechanics =
  * ==Map==
    * ==Tiles==
  * ==Personal Ecosystem Care==
