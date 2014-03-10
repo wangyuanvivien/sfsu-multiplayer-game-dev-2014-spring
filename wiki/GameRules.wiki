@@ -38,7 +38,7 @@ All players play on a persistent map:
  # Each player owns tiles and plays to expand the tiles they control.
  # <image>
  # The map will utilize a 3-dimensional coordinate system described towards the end of [http://keekerdc.com/2011/03/hexagon-grids-coordinate-systems-and-distance-calculations/ this article].
- # ===Tiles===
+ # ====Tiles====
    * Each hexagon tile has a Vegetation Capacity between 100 to 1000 Biomass Points.
      * Different terrain types have different Vegetation Capacity, i.e. a desert tile has a 100 vegetation biomass unit capacity where a plains tile has 500 and a tile with a river has 1000.
    * The amount biomass of vegetation in a player’s personal ecosystem is limited by the sum of the Vegetation Capacity of the tiles they own.
@@ -55,37 +55,37 @@ Players try to maintain a persistent ecosystem of species they can use to conque
  # Each update will progress the simulation of the Personal Ecosystem by 3 months. 
  # The ecosystem healths of all the players are checked every update and each player will be assigned an Environment Score that ranges around 10,000 points.
  # Players will be awarded 1% of the Environment Score in Biomass Points.
- # ===Spending Biomass Points===
+ # ====Spending Biomass Points====
 Players can use Biomass Points to introduce more biomass into their ecosystem.
    * 1 Biomass Point can purchase 1 biomass unit of a species.
    * Vegetation can not be purchased if the total amount of vegetation biomass in their ecosystem after the purchase exceeds the sum of the Vegetation Capacity of the tiles they own.
    * All species have minimum amounts to purchase that reflect their real-life size; large species have a higher minimum than small species.
      * ex. Lions must be bought in 800 biomass unit chunks, trees are bought in several thousand biomass unit chunks, while insects and small plants can be bought in single biomass unit chunks.
 
- * ==Battle for Tiles==
+==Battle for Tiles==
     Players can expand their ecosystem size by conquering tiles to add to their Vegetation Capacity.
 
-   * ==Declaring Battle==
-Players can attack from a tile they own to an adjacent tile.
-When a player declares battle on another tile, one of two types of battle will begin: a Direct Battle or a Proxy Battle
-The type of battle depends on the following:
-The battle is a Direct Battles if the tile being attacked is owned and the owner is online and accepts the battle within one minute.
-The battle is a Proxy Battle if the tile being attacked is unowned, or the tile is owned and either the owner is offline or the owner does not accept the battle within one minute.
-Attackers in a Proxy Battle join a global queue where they will be matched up to battle.
+   * ====Declaring Battle====
+     # Players can attack from a tile they own to an adjacent tile.
+     # When a player declares battle on another tile, one of two types of battle will begin: a Direct Battle or a Proxy Battle
+     # The type of battle depends on the following:
+       * The battle is a Direct Battles if the tile being attacked is owned and the owner is online and accepts the battle within one minute.
+       * The battle is a Proxy Battle if the tile being attacked is unowned, or the tile is owned and either the owner is offline or the owner does not accept the battle within one minute.
+     # Attackers in a Proxy Battle join a global queue where they will be matched up to battle.
 
-   * ==Building a Battle-Ecosystem==
+   * ====Building a Battle-Ecosystem====
 Once battle is initiated, players have 3 minutes to build a Battle Ecosystem.
 The Battle Ecosystem will be built by taking biomass of species from their Personal Ecosystem.
 Transfer of species to the Battle Ecosystem must comply with Vegetation Capacity maximums and species biomass minimums described in Personal Ecosystem Care.
 
-   * ==Default Battle Ecosystem==
+   * ====Default Battle Ecosystem====
 To assist the player, they will be provided a with a default Battle Ecosystem to modify.
 The Default Battle Ecosystem is identical to their own Personal Ecosystem but with a size proportional to the Vegetation Capacity of the tile they’re battling from in comparison to the entire Vegetation Capacity of their Personal Ecosystem.
 ex. If the player has 1000 biomass units of Vegetation Capacity containing 500 biomass units of crickets and 1000 biomass of grass in their Personal Ecosystem and is battling from a tile with 500 biomass units of Vegetation Capacity, their Default Battle Ecosystem will be comprised of an ecosystem containing half of the biomass in their  Personal Ecosystem (500 biomass units in the tile used to battle divided by the 1000 biomass units of total Vegetation Capacity = 1/2) and will be comprised of 250 biomass units of crickets and 500 biomass units of grass.
 Species will be rounded or excluded from the Default Battle Ecosystem to meet the minimum species biomass requirement.
 ex. If in the previous example the Default Battle Ecosystem contained 500 biomass of a hog instead of crickets, it would be excluded because it requires 300 biomass units minimum which is higher than the 250 proportional biomass units the Default Battle Ecosystem would contain; likewise, if hogs had a minimum of 150 biomass units, then only 150 biomass units would be added as 300 biomass units would also be more the proportional amount.
 
-     * ==Waging Battle==
+   * ====Waging Battle====
 Battle turns consists of the following three steps:
 
      * ==Progressing Time==
@@ -108,11 +108,12 @@ Neither player can see their opponent’s moves during the turn.
 After a player finishes their moves they consent to end the turn.
 The turn ends when both players consent or a one minute time limit elapses.
 
-   * ==Ending Battle==
+   * ====Ending Battle====
 Battle ends after 10 turns or when a battling player’s Battle Ecosystem collapses.
 At the end of the battle, the player with the highest Battle Environment Score wins.
 The loser of the battle forfeits the biomass used in the their Battle Ecosystem to the winner.
-     * ==Updating Tile Control==
+
+   # ====Updating Tile Control====
 Tile control is updated depending on the battle type:
 For Direct Battles: The loser forfeits control of the tile they battled from to the winner.
 For Proxy Battles: Only the winner gains control of the tile they attacked.
