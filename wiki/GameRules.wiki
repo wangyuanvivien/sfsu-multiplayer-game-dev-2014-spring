@@ -2,30 +2,28 @@
 
 = Introduction =
 
-Add your content here.
-
+ * ==Who we are==
+ * ==Why are we making this game==
 
 = Details =
-=Executive Summary=
-*==Who we are:==
-*==Why are we making this game:==
+
 =Login=
 =Account Creation=
 =Game Mechanics=
-==Map==
-===Tiles===
-==Personal Ecosystem Care==
-===Spending Biomass Points===
-==Battle for Tiles==
-===Declaring Battle===
-===Building a Battle-Ecosystem===
-===*Default Battle Ecosystem===
-===Waging Battle===
-===*Progressing Time===
-===*Attack Stage===
-===*Ending the Turn===
-===Ending Battle===
-===Updating Tile Control===
+ * ==Map==
+   * ==Tiles==
+ * ==Personal Ecosystem Care==
+   * ==Spending Biomass Points==
+ * ==Battle for Tiles==
+   * ==Declaring Battle==
+   * ==Building a Battle-Ecosystem==
+   * ==Default Battle Ecosystem==
+     * ==Waging Battle==
+     * ==Progressing Time==
+     * ==Attack Stage==
+     * ==Ending the Turn==
+   * ==Ending Battle==
+     * ==Updating Tile Control==
 
 
 Executive Summary
