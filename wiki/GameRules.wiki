@@ -32,7 +32,7 @@ The Login interface is the first thing user sees when starting game
  # We may want to have this come up right after a new account is created, as well as on the login screen.
 
 = Game Mechanics =
- * ==Map==
+==Map==
 All players play on a persistent map:
  # The map consists of 16807 concentric hexagonal tiles.
  # Each player owns tiles and plays to expand the tiles they control.
@@ -48,7 +48,7 @@ All players play on a persistent map:
        * Tile ownership
        * Vegetation Capacity
 
- * ==Personal Ecosystem Care==
+==Personal Ecosystem Care==
 Players try to maintain a persistent ecosystem of species they can use to conquer other tiles.
  # Each player starts with ownership of a single hexagon tile and 1000 Biomass Points to spend on creating an initial Personal Ecosystem.
  # Personal Ecosystems will be updated every 5 minutes whether the player is online or not.
@@ -56,7 +56,7 @@ Players try to maintain a persistent ecosystem of species they can use to conque
  # The ecosystem healths of all the players are checked every update and each player will be assigned an Environment Score that ranges around 10,000 points.
  # Players will be awarded 1% of the Environment Score in Biomass Points.
  # ====Spending Biomass Points====
-Players can use Biomass Points to introduce more biomass into their ecosystem.
+   * Players can use Biomass Points to introduce more biomass into their ecosystem.
    * 1 Biomass Point can purchase 1 biomass unit of a species.
    * Vegetation can not be purchased if the total amount of vegetation biomass in their ecosystem after the purchase exceeds the sum of the Vegetation Capacity of the tiles they own.
    * All species have minimum amounts to purchase that reflect their real-life size; large species have a higher minimum than small species.
@@ -74,46 +74,42 @@ Players can use Biomass Points to introduce more biomass into their ecosystem.
      # Attackers in a Proxy Battle join a global queue where they will be matched up to battle.
 
    * ====Building a Battle-Ecosystem====
-Once battle is initiated, players have 3 minutes to build a Battle Ecosystem.
-The Battle Ecosystem will be built by taking biomass of species from their Personal Ecosystem.
-Transfer of species to the Battle Ecosystem must comply with Vegetation Capacity maximums and species biomass minimums described in Personal Ecosystem Care.
-
-   * ====Default Battle Ecosystem====
-To assist the player, they will be provided a with a default Battle Ecosystem to modify.
-The Default Battle Ecosystem is identical to their own Personal Ecosystem but with a size proportional to the Vegetation Capacity of the tile they’re battling from in comparison to the entire Vegetation Capacity of their Personal Ecosystem.
-ex. If the player has 1000 biomass units of Vegetation Capacity containing 500 biomass units of crickets and 1000 biomass of grass in their Personal Ecosystem and is battling from a tile with 500 biomass units of Vegetation Capacity, their Default Battle Ecosystem will be comprised of an ecosystem containing half of the biomass in their  Personal Ecosystem (500 biomass units in the tile used to battle divided by the 1000 biomass units of total Vegetation Capacity = 1/2) and will be comprised of 250 biomass units of crickets and 500 biomass units of grass.
-Species will be rounded or excluded from the Default Battle Ecosystem to meet the minimum species biomass requirement.
-ex. If in the previous example the Default Battle Ecosystem contained 500 biomass of a hog instead of crickets, it would be excluded because it requires 300 biomass units minimum which is higher than the 250 proportional biomass units the Default Battle Ecosystem would contain; likewise, if hogs had a minimum of 150 biomass units, then only 150 biomass units would be added as 300 biomass units would also be more the proportional amount.
+     * Once battle is initiated, players have 3 minutes to build a Battle Ecosystem.
+     * The Battle Ecosystem will be built by taking biomass of species from their Personal Ecosystem.
+     * Transfer of species to the Battle Ecosystem must comply with Vegetation Capacity maximums and species biomass minimums described in Personal Ecosystem Care.
+     * ====Default Battle Ecosystem====
+       * To assist the player, they will be provided a with a default Battle Ecosystem to modify.
+       * The Default Battle Ecosystem is identical to their own Personal Ecosystem but with a size proportional to the Vegetation Capacity of the tile they’re battling from in comparison to the entire Vegetation Capacity of their Personal Ecosystem.
+         * ex. If the player has 1000 biomass units of Vegetation Capacity containing 500 biomass units of crickets and 1000 biomass of grass in their Personal Ecosystem and is battling from a tile with 500 biomass units of Vegetation Capacity, their Default Battle Ecosystem will be comprised of an ecosystem containing half of the biomass in their  Personal Ecosystem (500 biomass units in the tile used to battle divided by the 1000 biomass units of total Vegetation Capacity = 1/2) and will be comprised of 250 biomass units of crickets and 500 biomass units of grass.
+      * Species will be rounded or excluded from the Default Battle Ecosystem to meet the minimum species biomass requirement.
+        * ex. If in the previous example the Default Battle Ecosystem contained 500 biomass of a hog instead of crickets, it would be excluded because it requires 300 biomass units minimum which is higher than the 250 proportional biomass units the Default Battle Ecosystem would contain; likewise, if hogs had a minimum of 150 biomass units, then only 150 biomass units would be added as 300 biomass units would also be more the proportional amount.
 
    * ====Waging Battle====
-Battle turns consists of the following three steps:
-
-     * ==Progressing Time==
-At the start of each turn the simulation time of the Battle Ecosystems progresses 3 months.
-The ecosystem healths of the players are checked every turn and each player will be assigned a Battle Environment Score that ranges around 10,000 points.
-Players will be awarded 1% of the environment score in Battle Biomass Points.
-
-     * ==Attack Stage==
-During a turn, each player can spend Battle Biomass Points to make any amount of four movements :
-Retreat biomass of species from the Battle Ecosystem back into their Personal Ecosystem.
-Transfer biomass from their Personal Ecosystem into their Battle Ecosystem.
-Destroy biomass in their opponent’s Battle Ecosystem.
-Transfer biomass from their Battle Ecosystem into their opponent’s Battle Ecosystem.
-Every unit of biomass transferred cost 1 Battle Biomass Point.
-Transfer of species from the player’s Battle Ecosystem to either the player’s Personal Ecosystem or the opponent’s Battle Ecosystem must comply with Vegetation Capacity maximums and species biomass minimums described in Personal Ecosystem Care.
-
-     * ==Ending the Turn==
-Both players move simultaneously.
-Neither player can see their opponent’s moves during the turn.
-After a player finishes their moves they consent to end the turn.
-The turn ends when both players consent or a one minute time limit elapses.
+     * Battle turns consists of the following three steps:
+     # ====Progressing Time====
+       * At the start of each turn the simulation time of the Battle Ecosystems progresses 3 months.
+       * The ecosystem healths of the players are checked every turn and each player will be assigned a Battle Environment Score that ranges around 10,000 points.
+       * Players will be awarded 1% of the environment score in Battle Biomass Points.
+     # ====Attack Stage====
+       * During a turn, each player can spend Battle Biomass Points to make any amount of four movements :
+         # Retreat biomass of species from the Battle Ecosystem back into their Personal Ecosystem.
+         # Transfer biomass from their Personal Ecosystem into their Battle Ecosystem.
+         # Destroy biomass in their opponent’s Battle Ecosystem.
+         # Transfer biomass from their Battle Ecosystem into their opponent’s Battle Ecosystem.
+       * Every unit of biomass transferred cost 1 Battle Biomass Point.
+       * Transfer of species from the player’s Battle Ecosystem to either the player’s Personal Ecosystem or the opponent’s Battle Ecosystem must comply with Vegetation Capacity maximums and species biomass minimums described in Personal Ecosystem Care.
+     # ====Ending the Turn====
+       * Both players move simultaneously.
+       * Neither player can see their opponent’s moves during the turn.
+       * After a player finishes their moves they consent to end the turn.
+       * The turn ends when both players consent or a one minute time limit elapses.
 
    * ====Ending Battle====
-Battle ends after 10 turns or when a battling player’s Battle Ecosystem collapses.
-At the end of the battle, the player with the highest Battle Environment Score wins.
-The loser of the battle forfeits the biomass used in the their Battle Ecosystem to the winner.
+     * Battle ends after 10 turns or when a battling player’s Battle Ecosystem collapses.
+     * At the end of the battle, the player with the highest Battle Environment Score wins.
+     * The loser of the battle forfeits the biomass used in the their Battle Ecosystem to the winner.
 
    # ====Updating Tile Control====
-Tile control is updated depending on the battle type:
-For Direct Battles: The loser forfeits control of the tile they battled from to the winner.
-For Proxy Battles: Only the winner gains control of the tile they attacked.
+     * Tile control is updated depending on the battle type:
+       * For Direct Battles: The loser forfeits control of the tile they battled from to the winner.
+       * For Proxy Battles: Only the winner gains control of the tile they attacked.
