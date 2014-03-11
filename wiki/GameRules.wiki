@@ -1,14 +1,6 @@
 <wiki:toc max_depth="4" />
 #summary CSC 631 Design Document, detailed game rules.
 
-= Executive Summary =
-
-==Who we are== 
-Students of San Francisco State University Spring 2014 CSc 631 Multiplayer Game Development Class
-
-==Why are we making this game==
-To assist in studying the effects of changing a stable ecosystem by removing or adding different species
-
 = Login =
 The Login interface is the first thing user sees when starting game
 <image>
