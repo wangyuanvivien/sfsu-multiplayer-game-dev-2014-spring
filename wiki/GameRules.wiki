@@ -43,7 +43,7 @@ All players play on a persistent map:
 
 ==Personal Ecosystem Care==
 Players try to maintain a persistent ecosystem of species they can use to conquer other tiles.
- # Each player starts with ownership of a single hexagon tile and 1000 *Biomass Points* to spend on creating an initial *Personal Ecosystem*.
+ # Each player starts with ownership of a single hexagon tile they select from unowned tiles and 1000 *Biomass Points* to spend on creating an initial *Personal Ecosystem*.
  # *Personal Ecosystems* will be updated every 5 minutes whether the player is online or not.
  # Each update will progress the simulation of the *Personal Ecosystem* by 3 months. 
  # The ecosystem healths of all the players are checked every update and each player will be assigned an *Environment Score* that ranges around 10,000 points.
@@ -65,6 +65,8 @@ Players try to maintain a persistent ecosystem of species they can use to conque
        * The battle is a *Direct Battle* if the tile being attacked is owned and the owner is online and accepts the battle within one minute.
        * The battle is a *Proxy Battle* if the tile being attacked is unowned, or the tile is owned and either the owner is offline or the owner does not accept the battle within one minute.
      # Attackers in a *Proxy Battle* join a global queue where they will be matched up to battle.
+     # During battle, the player's *Personal Ecosystem* remains unchanged (the amount of biomass from the *Personal Ecosystem* used in the *Battle Ecosystem* will be updated after battle).
+     #During battle, player's can still maintain their *Personal Ecosystem*.
 
    * ===Building a Battle-Ecosystem===
      * Once battle is initiated, players have 3 minutes to build a *Battle Ecosystem*.
@@ -92,10 +94,12 @@ Players try to maintain a persistent ecosystem of species they can use to conque
          # Transfer biomass from their *Battle Ecosystem* into their opponent’s *Battle Ecosystem*.
        * Every unit of biomass transferred or destroyed cost 1 *Battle Biomass Point*.
        * Transfer of species from the player’s *Battle Ecosystem* to either the player’s *Personal Ecosystem* or the opponent’s *Battle Ecosystem* must comply with *Vegetation Capacity* maximums and species biomass minimums described in [GameRules#Spending_Biomass_Points].
+       * Biomass transferred to the *Battle Ecosystem* from the *Personal Ecosystem* will be done using the latest updated state of the *Personal Ecosystem* to when the turn is ended.
      # ====Ending the Turn====
        * Both players move simultaneously.
        * Neither player can see their opponent’s moves during the turn.
        * After a player finishes their moves they consent to end the turn.
+       * A player may not perform any more moves for the turn after they consent to end it.
        * The turn ends when both players consent or a one minute time limit elapses.
 
    * ===Ending Battle===
