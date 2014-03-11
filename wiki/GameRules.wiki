@@ -69,6 +69,7 @@ Players try to maintain a persistent ecosystem of species they can use to conque
    * ===Building a Battle-Ecosystem===
      * Once battle is initiated, players have 3 minutes to build a *Battle Ecosystem*.
      * The *Battle Ecosystem* will be built by taking biomass of species from their *Personal Ecosystem*.
+     * The *Vegetation Capacity* of the player's *Battle-Ecosystem* is the *Vegetation Capacity* of the tile they are battling from.
      * Transfer of species to the *Battle Ecosystem* must comply with *Vegetation Capacity* maximums and species biomass minimums described in [GameRules#Spending_Biomass_Points].
      * ====Default Battle Ecosystem====
        * To assist the player, they will be provided a with a default *Battle Ecosystem* to modify.
