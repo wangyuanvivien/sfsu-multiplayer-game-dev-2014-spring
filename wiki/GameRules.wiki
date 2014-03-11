@@ -19,7 +19,7 @@ The Login interface is the first thing user sees when starting game
    * Birthday (bonus?)
  # After account is created, game is started.
  # Options for “about” and “help”
- # Explain Game rules (As shown in Steven’s slideshow)
+ # Explain Game rules (As shown in [https://docs.google.com/presentation/d/1Wl9s4cjVPGfXoPV-jAs4sWMffvrDyvkJ44gA7kB5SqM/edit#slide=id.g2c22e1e92_030/ Steven’s slideshow])
  # Show how to play (where to click, how to make a move…)
  # Tips and tutorial (to make the game more fair to newer players)
  # We may want to have this come up right after a new account is created, as well as on the login screen.
