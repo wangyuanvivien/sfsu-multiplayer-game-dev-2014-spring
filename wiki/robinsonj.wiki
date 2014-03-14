@@ -1,0 +1,48 @@
+#summary Requirements Documentation; Joseph Robinson
+#labels Database,DataVisualization
+
+Joe Robinson (Database)
+
+==Requirements==
+  * Database shall support logging of game state at specific intervals or upon completion of certain events.
+  * Game history storage shall not interfere with retrieval of current game state data.
+  * Database access layer shall have queries to support retrieval of historical data for display and visualization in the client.
+  * Database shall hold historical data for a specified period of time (ex: only keep records less than a week old).
+  * Database access layer in server shall support queries for storing & retrieving historical data.
+  * Server shall be able to retrieve data for serving to the client in an efficient timespan.
+
+----
+
+==Components==
+  * ===TileTable===
+    * holds information concerning each individual tile in the game world
+    * includes current owner (if any), tile size, type, etc
+  * ===DataLogTables===
+    * schema will need to support archiving historical game data for later visualization
+    * only changing data that will need to be retrieved later needs to be tracked
+    * data will need to be logged at certain intervals/upon completion of certain events
+  * ===Server DAOs===
+    * server objects for retrieving logged data to be returned to the client
+
+----
+
+==Tasks==
+  * Research best practices for storing historical game data
+  * Implement basic changes to database to support records
+  * Implement queries for server to execute for data retrieval
+  * Test and refine implementation
+
+----
+
+==Milestones==
+	===M1:===
+  # Familiarize with existing database schema (Mar. 20)
+  # Determine what needs to be changed/added to support new features. (Mar. 27)
+  # Research best practices for storing data changes over time (Mar. 30)
+    * Data history must not affect current game state.
+    * Only certain pieces/subsets of data need to be stored.
+	===M2:===
+  # Implement new database features to support game history (Apr. 11)
+  # Implement new queries to retrieve/store pieces of game history (Apr. 17)
+  # Testing schema & data access (Apr. 24)
+  # Refine implementation until delivery (May 1)
