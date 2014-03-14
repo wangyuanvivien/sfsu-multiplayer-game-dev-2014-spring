@@ -1,0 +1,111 @@
+#summary Requirements Documentation: Lowell Milliken
+
+Lowell Milliken – Server Team – Battle Team
+==1. Requirements==
+ * The server shall be able to connect players to battle each other.
+ * The server shall be able to maintain the players' battle ecosystem state and report it to the clients.
+  * These states include the species and their respective biomasses, the capacities of the tiles that the battle is taking place on, the environmental state of these tiles, the players' current battle environment score, and the players' current battle biomass points.
+ * The server shall be able to update the ecosystem state based on the players' turn actions from the client.
+  * These actions include spending battle biomass points to move battle biomass of species to or from their main ecosystem, destroy biomass in their opponent's battle ecosystem, or move biomass from their battle ecosystem to their opponent's battle ecosystem. Other special actions may also be possible.
+ * The server shall be able to verify that the actions taken by the players are valid given their current biomass and battle biomass points. (This is just in case the server is sent invalid data. The client should not allow the player to send an invalid action.)
+ * The server shall be able to determine the winner of a battle based on battle environment score and report the results to the clients.
+
+==2. Component Design==
+
+Server Team:
+*BattleController*  (This class may be something covered by the Map team)
+ * One per server
+ * Initializes from config file and holds available ModActions (passes List/Map to each Battle)
+ * Holds all Battles
+ * Holds Players in queue for battle
+ * Matches players for battle based on adjacency to desired tiles and queue status.
+  * If there is an online player who is adjacent to the desired tile, add a battle inquiry to that player's status to be sent with the next HeartbeatResponse.
+  * If not, look for available players in the queue.
+  * If there are no players in the queue, add the current player to the queue.
+ * Inquiry responses
+  * Yes: create a Battle for the players
+  * No: look for matching players again
+ * When two players are ready to battle, create a Battle for them. Add the in-battle status to the players' HeartbeatResponses
+
+*Battle*
+ * One instance of this per battle
+ * This class contains most of the battle logic.
+ * Holds the BattlePlayers currently in the battle 
+ * Processes battle turns
+  * Gets environmental effects from appropriate class and applies them
+  * Applies player turn actions
+  * Submits that to content classes and waits for results
+
+*TurnAction*
+ * Interface or abstract class (not sure) for actions that players can do.
+
+*BiomassAction*
+ * Extends/Implements TurnAction
+ * Action that the players can do involving adding or removing biomass.
+ * Changes biomass values for input into simulation engine
+
+*ModAction*
+ * Extends/Implements TurnAction
+ * Action that the players can do involving changing simulation variables.
+ * Actions can be modifiers to the current variables of the simulation engine.
+ * Available ModActions can be stored in config file.
+
+*BattlePlayer*
+ * Extends Player model
+ * Contains battle specific information about the player: score, battle biomass points, tile, current action.
+
+Request and Response classes extend GameRequest and GameResponse respectively.
+(It would probably be possible to combine many of these into different cases of the same Request/Response. This is up for discussion.)
+These may be the responsibility of the protocol team; I am not sure.
+
+*NewBattleRequest*
+ * Receives information from client about the player's desired tile.
+ * Hands the information to the BattleController to process
+
+*NewBattleResponse*
+ * Responds with the status of the battle request: in queue or waiting for response from available player.
+
+*BattleInquiryRequest*
+ * Receives “yes” or “no” from a client who has a battle pending from another player.
+ * Sends response to the BattleController to process.
+
+*BattleInquiryResponse*
+ * Confirms receipt of the request.
+
+*BattleStartRequest*
+ * Receives desired initial state of the player's battle ecosystem.
+Sends it to the Battle.
+
+*BattleStartResponse*
+ * Confirms receipt of the request. (BattleHeartbeats start after the client recieves this.)
+
+*BattleTurnRequest*
+ * Receives information from client about the player's turn action and stores it in BattlePlayer.
+ * Verifies that player action is valid.
+ * Create a confirmation response (BattleTurnResponse).
+
+*BattleTurnResponse*
+ * Respond to client with turn valid or invalid. If invalid, says why.
+
+*BattleHeartbeatRequest* (This could be rolled into normal heartbeat with an “in battle” check)
+ * Confirms client's connection
+
+*BattleHeartbeatRequest* (This could be rolled into normal heartbeat with an “in battle” check)
+ * Responds with Turn status and Battle information.
+  * If both players are still in their turn, respond with that.
+  * If one player is done with their turn, respond with that.
+  * If both players are done with their turn and turn processing is done, respond with the turn results for both players.
+
+==3. Deliverables==
+
+4 week milestones:
+ * 3/20	Review current code and see what can be reused. Highly likely to change what classes need to be written. 
+ * 4/3	BattlePlayer class, Request and Response classes (based on what the team decides is needed)
+ * 4/10	Battle class, Request and Response classes
+ * 4/17	TurnAction class/interface, BiomassAction, Request and Response classes
+next 4 weeks:
+ * ModAction class, ModAction config file.
+
+Content Team API and Natural Environment Team API needed to complete the Battle class.
+Protocols needed to complete Request/Response classes.
+For now, I do not think I need much interaction with the database, but we shall see what discussion of the issue brings us.
