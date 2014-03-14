@@ -1,6 +1,6 @@
-#summary One-sentence summary of this page.
-Requirement documentation: Data visualization & Protocol (lead)
-= David Hua's Requirements =
+#Requirement documentation: Data visualization & Protocol (lead)
+
+= Requirements =
 
 Protocol (Lead) Requirements:
 - Communicate with client and server member on what data they need to transfer (by creating appropriate request/response files that transfer data between client and server in order to get essential ingredients to creating data visualizations
