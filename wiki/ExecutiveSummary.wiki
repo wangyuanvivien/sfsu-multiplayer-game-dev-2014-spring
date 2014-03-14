@@ -1,8 +1,0 @@
-= Executive Summary =
-
-==Who we are== 
-Students of San Francisco State University Spring 2014 CSc 631 Multiplayer Game Development Class
-
-==Why are we making this game==
-To assist in studying the effects of changing a stable ecosystem by removing or adding different species
-es
