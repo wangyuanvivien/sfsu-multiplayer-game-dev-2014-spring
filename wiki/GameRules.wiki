@@ -10,7 +10,7 @@ The Login interface is the first thing user sees when starting game
    * register
    * about
    * help
-[http://smurf.sfsu.edu/~debugger/images/downloadButton.png]
+[https://dl.dropboxusercontent.com/u/58969276/WoB%20Login.jpg]
 
 = Account Creation =
  # To create an account, new users clicks “Register” from login screen. This brings up a form asking for basic information:
