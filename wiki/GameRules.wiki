@@ -30,7 +30,7 @@ The Login interface is the first thing user sees when starting game
 All players play on a persistent map:
  # The map consists of 16807 concentric hexagonal tiles.
  # Each player owns tiles and plays to expand the tiles they control.
- # <image>
+ # [http://thecity.sfsu.edu/~jcotter/tiledetail.png]
  # The map will utilize a 3-dimensional coordinate system described towards the end of [http://keekerdc.com/2011/03/hexagon-grids-coordinate-systems-and-distance-calculations/ this article].
  # ===Tiles===
    * Each hexagon tile has a *Vegetation Capacity* between 100 to 1000 *Biomass Points*.
