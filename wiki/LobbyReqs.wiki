@@ -2,5 +2,4 @@
 
 ==Members (Functionality)==
 
-[Ye Cheng (Server)]
-https://code.google.com/p/sfsu-multiplayer-game-dev-2014-spring/wiki/ycheng
+[ycheng Ye Cheng (Server)]
