@@ -1,1 +1,3 @@
 #summary Data Visualization Group; Requirements Documentation
+
+[jcotter Justina Cotter (Content)]
