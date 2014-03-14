@@ -1,5 +1,5 @@
 #summary Data Visualization Group; Requirements Documentation
 
-== Members ==
+==Members (Functionality)==
 
 [jcotter Justina Cotter (Content)]
