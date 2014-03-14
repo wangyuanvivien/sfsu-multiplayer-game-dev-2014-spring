@@ -1,1 +1,1 @@
-#summary UI and Game Logic Group; Requirements Documentation
+#summary Battle UI and Game Logic Group; Requirements Documentation
