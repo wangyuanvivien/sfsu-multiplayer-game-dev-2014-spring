@@ -1,1 +1,3 @@
 #summary Lobby Group; Requirements Documentation
+
+==Members (Functionality)==
