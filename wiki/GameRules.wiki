@@ -3,13 +3,14 @@
 
 = Login =
 The Login interface is the first thing user sees when starting game
-[http://smurf.sfsu.edu/~debugger/images/downloadButton.png]
+
  # If connection to server can be established, show current game world in progress
  # Options included at top of screen for:
    * sign in
    * register
    * about
    * help
+[http://smurf.sfsu.edu/~debugger/images/downloadButton.png]
 
 = Account Creation =
  # To create an account, new users clicks “Register” from login screen. This brings up a form asking for basic information:
