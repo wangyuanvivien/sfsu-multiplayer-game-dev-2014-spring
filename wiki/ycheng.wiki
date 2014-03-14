@@ -1,0 +1,49 @@
+=Requirement Specification and Milestones=
+
+==Lobby and Hexagon Tile World Team==
+
+==Server Part==
+
+===Ye Cheng===
+
+1. Requirements
+           Server shall work with client, simulation and database side to fulfill the following requirements:
+    * The server shall receive the login request from player, connect the database to verify, send back response (login successful or not) to the client.
+    * The server shall wait for the client’s request to enter a proper model.
+    * The server shall respond to the player’s ecosystem care request and pass it to the simulation engine. After getting results from the simulation engine, the server will send data back to client to display.
+    * The server shall respond to the player’s battle model request and pass it to the battle component for processing. After getting response from battle component, the server will frequently make response to the client to display battle details.
+    * The server shall support different protocols:
+         * Log in information (id and password).
+         * Player’s information (level, biomass points etc.).
+         * Request a personal ecosystem care or battle model:
+         * Personal ecosystem care: provide protocol for getting back information from simulation engine the growth information of different species, requesting to purchase new species, requesting to get history information.
+         * Battle: provide protocol to get result for battle model from battle component.
+         * Chat information (from server and other players)
+         * Shop information (purchase new species)
+
+    * The server shall connect with database to retrieve:
+         * Player’s information: id, password, biomass points, level.
+         * Species’s information: name, detail, unlocked or not, quantity.
+         * Tile information: owner, position, biomass.
+2. Component Design
+           Server will focus on implementing the following protocols. Proper functions and classes may be added during implementation.
+
+    * RequestLogin, ResponseLogin
+    * RequestPlayer, ResponsePlayer
+    * RequestChat, ResponseChat
+    * RequestMap, ResponseMap
+    * RequestTile, ResponseTile
+    * RequestSpecies, ResponseSpecies
+    * RequestPersonal, ResponsePersonal
+    * RequestSimulation, ResponseSimulation
+    * RequestUnlock, ResponseUnlock
+    * RequestShop, ResponseShop
+    * RequestBattleInit, ResponseBattleInit
+    * ReqeustBattleProcess, ResponseBattleProcess
+    * RequestBattleResult, ResponseBattleResult
+    * RequestTraining, ResponseTraining
+3. Deliverables
+
+           This needs to be discussed with other members in the team to finalize
+    * By 4/8: Game map, request and response protocols ready, DB table ready, interface ready
+    * By 5/6: integration test and debugging
