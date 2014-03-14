@@ -1,0 +1,46 @@
+#summary One-sentence summary of this page.
+Requirement documentation: Data visualization & Protocol (lead)
+= David Hua's Requirements =
+
+Protocol (Lead) Requirements:
+- Communicate with client and server member on what data they need to transfer (by creating appropriate request/response files that transfer data between client and server in order to get essential ingredients to creating data visualizations
+
+- Be able to communicate with protocol members to figure out if there are any shared networking (request/response) files for transferring similar data manipulations.
+
+Data Visualization Requirements:
+
+	- Player data (including environmental score)
+
+	- Biomass graph: Player is able to see change in environment/ecosystem over time
+
+	- Species’ interactions graph: Analytics of species’ health in relation to predators/prey.
+ 
+	- Species’ quantities & events graph: Shows number of species over time, with specific events that may have affected the species (e.g. # of purchases, births, eaten, poached)
+
+	- Tile data, battle data, and other miscellaneous data
+
+Protocol Specifications for Data Visualization:
+	- Request/response data transfer files on both the server and the client so that client is able to have updated data after server runs modifications of data due to certain activities
+
+-	  RequestPlayerData()/ResponsePlayerData()
+		        RequestBiomassGraph()/ResponseBiomassGraph()
+		        RequestSpeciesInteraction()/ResponseSpeciesInteraction()
+		        RequestSpeciesQuantity()/ResponseSpeciesQuantity()
+		        RequestTileData()/ResponseTileData()
+		        RequestBattleData()/ResponseBattleData()
+
+Milestones:
+#1 tentatively due 4/10
+	- All request/response files necessary for server and client to run appropriately 
+-  RequestPlayerData()/ResponsePlayerData() 
+
+#2 tentatively due 4/24
+	- Key request/response files necessary for capability of data visualization component
+		- RequestBiomassGraph()/ResponseBiomassGraph(), 
+  RequestSpeciesInteraction()/ResponseSpeciesInteraction(), 
+  RequestSpeciesQuantity()/ResponseSpeciesQuantity()
+
+#3 tentatively due 5/8
+	- Request/response files used for data visualization of less essential data
+- RequestTileData()/ResponseTileData()
+		   RequestBattleData()/ResponseBattleData()
