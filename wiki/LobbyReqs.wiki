@@ -1,2 +1,1 @@
-#summary Lobby Group Requirements Documentation
-
+#summary Lobby Group; Requirements Documentation
