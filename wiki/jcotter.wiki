@@ -1,0 +1,40 @@
+#summary Requirements Documentation; Justina Cotter
+
+==Requirements, Justina Cotter (Content)==
+  * *Data Visualization Component Group:*
+    * Support Data Visualization group on simulation engine functionality.
+
+  * *Battle (Natural habitat) User Interface and Game Logic Component Group:*
+    * Support Battle/Natural habitat group on simulation engine functionality.
+
+  * *Content Team:*
+    * Identify predictive properties for persistent and stable game ecosystems via analysis of simulator output.
+    * Facilitate analysis by creating a GUI interface, batch process for simulation tests (jobs) and database files to store job parameters and simulation results.
+
+==Components:==
+  * SimulationTest.DesignSimulation()
+    * UI: enter desired species and biomass information, # of time steps
+    * UI: adjust parameters for novel simulation tests
+    * Actions: RunSim, AddToSimBatch, SimBatchRun
+  * SimulationTest.AddToSimBatch()
+    * Accept input from DesignSimulation()
+    * SimulationTest.RunSimBatch(); run jobs in current batch
+    * SimulationTest.RunSim(); run single job
+    * SimulationTest.ImportSimResults(); import simulation engine's csv results file
+  * DB: SimBatch, SimResults
+    * batch header: SimBatch; job ID, global parameter information, status, created time stamp, completed time stamp
+    * batch detail: SimBatchDetail; species specific information
+    * results header: SimResults: manipulation ID, time stamp, time steps, job ID
+    * results detail: SimResultsDetail: species, biomass
+
+==Milestones:==
+===First four weeks===
+  * By Mar 20 - Learn details of simulation behavior; gain better understanding of parameters affecting the algorithm.
+  * By Apr 3 - SimulationTest.DesignSimulation().
+  * By Apr 10 - SimulationTest.RunSim(), SimulationTest.AddToSimBatch(), SimulationTest.RunSimBatch().
+  * By Apr 17 - Design DB to store simulation batches and results.
+
+===Second four weeks===
+  * By Apr 24 - Implement DB: SimBatch, SimResults; SimulationTest.ImportSimResults()
+  * By Apr 25 - Study current calculation of environment score and experiment with possible revisions.
+  * May 1 - May 15 - Use knowledge gained and infrastructure implemented in prior weeks to run and evaluate results of simulation tests with a goal of identifying predictive properties for persistent and stable game ecosystems.
