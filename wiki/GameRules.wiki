@@ -3,7 +3,7 @@
 
 = Login =
 The Login interface is the first thing user sees when starting game
-[[File:WoB Login.jpg|thumb|World of Balance Tile World]]
+[[http://smurf.sfsu.edu/~debugger/images/downloadButton.png|thumb|World of Balance Tile World]]
  # If connection to server can be established, show current game world in progress
  # Options included at top of screen for:
    * sign in
