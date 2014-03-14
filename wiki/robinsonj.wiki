@@ -14,10 +14,10 @@ Joe Robinson (Database)
 ----
 
 ==Components==
-  * ===TileTable===
+  * ===Tile Table===
     * holds information concerning each individual tile in the game world
     * includes current owner (if any), tile size, type, etc
-  * ===DataLogTables===
+  * ===Data Log Tables===
     * schema will need to support archiving historical game data for later visualization
     * only changing data that will need to be retrieved later needs to be tracked
     * data will need to be logged at certain intervals/upon completion of certain events
