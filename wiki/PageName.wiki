@@ -8,10 +8,13 @@ Game Project: World of Balance
 	The long term goal allow tiles of hexagon of map and other game elements to be highlighted and blink to instruct users to do a desired action. 
 	The interface must guide the users to do certain desired actions and help a user to understand how to play the game.
 <Two tutorial modes>
-	<Sandbox Tutorial>
-	- Sandbox mode is about teaching the player how to interact with the ecosystem, and will 	have goals related to building a complex ecosystem.
+	
+
+        <Sandbox Tutorial>
+	- Sandbox mode is about teaching the player how to interact with the ecosystem, and will have goals related to building a complex ecosystem.
 	-This mode will provide the basic tutorial to the user how to play this game.
-	<Multiplayer Tutorial>
+	
+        <Multiplayer Tutorial>
 	- Multiplayer's tutorial mode has the user  and a non-playable "dummy" player. 
 	- This mode provides the user with information about how to attack other players. 
 	- The "dummy" player does nothing and is only used to show the user how to engage in 	battle. 
