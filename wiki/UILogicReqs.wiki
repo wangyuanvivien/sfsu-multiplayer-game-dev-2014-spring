@@ -1,1 +1,3 @@
 #summary Battle UI and Game Logic Group; Requirements Documentation
+
+[jcotter Justina Cotter (Content)]
