@@ -1,0 +1,92 @@
+#summary Content Team Requirements Document (3/15/2014)
+
+Requirements Document
+Natural Conquest
+CSC 631, Spring 2014
+
+
+Team Members:
+Justina Cotter
+* Mar 20: Learn details of simulation behavior and current manipulation infrastructure; select priority parameters for simulation jobs; learn DB interface
+* Apr 3: Implement SimResults DB and associated classes, methods; SimJob.SaveSimResults(); design simulation test strategy
+* Apr 10: Implement SimJob.RunSimJob(); revise test strategy
+* Apr 17:  Run simulations/test GUI; cost/benefit analysis of batching jobs
+* Weekly: Interface with Battle team and manage Data Vis team
+
+
+John Rittweger
+* Mar 20: Read Williams; review contents-doc-kchoi.pdf to determine relevance for Tutorial team; mock up of UI for SimJob.DesignSimJob()
+* Apr 3: Create SimJob class
+* Apr 10: Working version of SimJob.DesignSimJob()
+* Apr 17: Implement SimJob.LoadSimJob(); SimJob.LoadSimJobToGUI()
+* Weekly: Interface with Tutorial team
+
+
+Kason Soohoo
+* Mar 20: Read Williams; implement SimResults.ImportSimResults() (i.e. read/parse WoB_Data.CSV)
+* Apr 3: Learn DB interface; run simulations (w/o benefit of UI) to evaluate possible ecosystems (Justina to provide guidance on DB and simulation methods)
+* Apr 10: Implement SimJobs DB; SimJob.SaveSimeJob(); SimJob.LoadSimJobs()
+* Apr 17: Run simulations/test GUI
+* Weekly: Interface with natural environment team
+
+
+Apr 24-May 15 (team)
+* Enhance job process as necessary to meet simulation test (experimental) needs, including, if necessary, batch processing.
+* Study current calculation of environment score and experiment with possible revisions.
+* Use knowledge gained and infrastructure implemented in prior weeks to run and evaluate results of simulation tests with a goal of identifying predictive properties for persistent and stable game ecosystems.
+* Write recommendations document for ecosystem instantiation.
+
+
+Requirements:
+1. Identify predictive properties for persistent and stable game ecosystems via analysis of simulator output.
+2. Facilitate analysis by creating a GUI and database files to submit and store job configuration and simulation results.  If time, GUI and database files to submit and store batch jobs.
+3. Write recommendations document for ecosystem instantiation.
+
+
+Components:
+1. SimJob Class
+2. SimJob.DesignSimJob() [Note: ideally sim users could also add and duplicate jobs and batches directly from the database.]
+   1. UI fields:
+      1. # of time steps
+      2. n desired species and associated biomass information
+      3. (display) species unit biomass
+      4. parameters (specific parameters still under evaluation)
+         1. global
+         2. species-specific; for each of n species
+      1. Advanced ideas
+         1. (possibly separate input prompts for species by metabolic type)
+         2. (alternative for indicating relative biomass (to initial ecosystem), i.e. proportions, for a met-type or species?)
+         3. (alternative for selecting random species from w/in met-types?)
+         4. (randomize-able parameters for novel simulation tests each time a job is run; e.g. random values w/in param-specific intervals, …?)
+   1. UI Actions: LoadSimJobToGUI(), RunSimJob(), AddToSimBatch(), RunSimBatch()
+   2. Save to SimJobs/SimBatch as appropriate
+1. SimJob.LoadSimJob()
+   1. Load job into memory
+1. SimJob.LoadSimJobToGUI()
+   1. Check before overwriting existing fields
+   2. LoadSimJob()
+   3. populate DesignSim() UI fields
+1. SimJob.RunSimJob()
+   1. LoadSimJob() if not already in memory
+   2. Run simulation
+   3. Call ImportSimResults()
+1. SimResults Class
+2. SimResults.ImportSimResults(): Import simulation engine’s CSV results file (WoB_Data.CSV)
+3. SimResults.SaveSimResults(): Save to SimResults DB
+4. SimBatch Class
+5. SimBatch.RunSimBatch()
+   1. UI fields: select batch
+      1. (option to duplicate prior batch?)
+   1. run jobs in selected batch (multithreaded?)
+1. SimBatch.AddToSimBatch()
+   1. Accept input from DesignSim()
+   2. Store Job
+   3. Add/Update Batch
+1. DB: SimJobs (and associated classes, methods)
+   1. job header: SimJobs; job ID, description, global parameter information, manipulation ID
+   2. job detail: SimJobsDetail; job ID, species ID, species biomass, species-level parameters
+1. DB: SimResults (and associated classes, methods)
+   1. results header: SimResults: manipulation ID, time stamp, time steps, job ID
+   2. results detail: SimResultsDetail: manipulation ID, species ID, biomass
+1. DB: SimBatch (and associated classes, methods)
+   1. batch header: SimBatch; batch ID, job ID, status, created time stamp, completed time stamp
