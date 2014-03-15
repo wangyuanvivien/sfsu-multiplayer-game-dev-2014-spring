@@ -4,37 +4,36 @@ Requirements Document
 Natural Conquest
 CSC 631, Spring 2014
 
-
 Team Members:
 Justina Cotter
-* Mar 20: Learn details of simulation behavior and current manipulation infrastructure; select priority parameters for simulation jobs; learn DB interface
-* Apr 3: Implement SimResults DB and associated classes, methods; SimJob.SaveSimResults(); design simulation test strategy
-* Apr 10: Implement SimJob.RunSimJob(); revise test strategy
-* Apr 17:  Run simulations/test GUI; cost/benefit analysis of batching jobs
-* Weekly: Interface with Battle team and manage Data Vis team
+  * Mar 20: Learn details of simulation behavior and current manipulation infrastructure; select priority parameters for simulation jobs; learn DB interface
+  * Apr 3: Implement SimResults DB and associated classes, methods; SimJob.SaveSimResults(); design simulation test strategy
+  * Apr 10: Implement SimJob.RunSimJob(); revise test strategy
+  * Apr 17:  Run simulations/test GUI; cost/benefit analysis of batching jobs
+  * Weekly: Interface with Battle team and manage Data Vis team
 
 
 John Rittweger
-* Mar 20: Read Williams; review contents-doc-kchoi.pdf to determine relevance for Tutorial team; mock up of UI for SimJob.DesignSimJob()
-* Apr 3: Create SimJob class
-* Apr 10: Working version of SimJob.DesignSimJob()
-* Apr 17: Implement SimJob.LoadSimJob(); SimJob.LoadSimJobToGUI()
-* Weekly: Interface with Tutorial team
+  * Mar 20: Read Williams; review contents-doc-kchoi.pdf to determine relevance for Tutorial team; mock up of UI for SimJob.DesignSimJob()
+  * Apr 3: Create SimJob class
+  * Apr 10: Working version of SimJob.DesignSimJob()
+  * Apr 17: Implement SimJob.LoadSimJob(); SimJob.LoadSimJobToGUI()
+  * Weekly: Interface with Tutorial team
 
 
 Kason Soohoo
-* Mar 20: Read Williams; implement SimResults.ImportSimResults() (i.e. read/parse WoB_Data.CSV)
-* Apr 3: Learn DB interface; run simulations (w/o benefit of UI) to evaluate possible ecosystems (Justina to provide guidance on DB and simulation methods)
-* Apr 10: Implement SimJobs DB; SimJob.SaveSimeJob(); SimJob.LoadSimJobs()
-* Apr 17: Run simulations/test GUI
-* Weekly: Interface with natural environment team
+  * Mar 20: Read Williams; implement SimResults.ImportSimResults() (i.e. read/parse WoB_Data.CSV)
+  * Apr 3: Learn DB interface; run simulations (w/o benefit of UI) to evaluate possible ecosystems (Justina to provide guidance on DB and simulation methods)
+  * Apr 10: Implement SimJobs DB; SimJob.SaveSimeJob(); SimJob.LoadSimJobs()
+  * Apr 17: Run simulations/test GUI
+  * Weekly: Interface with natural environment team
 
 
 Apr 24-May 15 (team)
-* Enhance job process as necessary to meet simulation test (experimental) needs, including, if necessary, batch processing.
-* Study current calculation of environment score and experiment with possible revisions.
-* Use knowledge gained and infrastructure implemented in prior weeks to run and evaluate results of simulation tests with a goal of identifying predictive properties for persistent and stable game ecosystems.
-* Write recommendations document for ecosystem instantiation.
+  * Enhance job process as necessary to meet simulation test (experimental) needs, including, if necessary, batch processing.
+  * Study current calculation of environment score and experiment with possible revisions.
+  * Use knowledge gained and infrastructure implemented in prior weeks to run and evaluate results of simulation tests with a goal of identifying predictive properties for persistent and stable game ecosystems.
+  * Write recommendations document for ecosystem instantiation.
 
 
 Requirements:
