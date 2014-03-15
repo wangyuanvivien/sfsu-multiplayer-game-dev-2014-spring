@@ -4,10 +4,4 @@
 
 I am adding this page to help first time wiki users.
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Come to this "Wiki" tab, click the "New page" button, name the page that you can remember and reference.
