@@ -1,0 +1,108 @@
+Marco Chin
+=Natural Environment/ Server Team=
+
+=1. Requirements=
+
+=Natural Environment requirements:=
+	The game shall implement the use of types of environments, disasters, season changes, and diseases, listed in ascending priority.
+
+=Priorities= 
+=1 - Must have, don’t launch without=
+
+1.	Types of Environments
+
+                a.	Desert
+
+                b.	Jungle
+
+                c.	Grasslands
+
+                d.	Arctic
+
+2.      Disasters
+                a.	Fire
+
+                b.	Flood
+
+=2 - Good to have=
+1.	Seasons
+
+        a.	Spring
+
+        b.	Summer
+
+        c.	Fall
+
+        d.	Winter
+
+2.	Events
+        a.	Rain
+
+=3 - Nice to have, but only if there’s time=
+1.	Diseases
+       a.	Animal Disease
+       b.	Plant Disease
+       c.	Terrain Disease(both animal and plant)
+      2.   Other Disasters/Events
+       a.	Snowstorm
+       b.	Hurricane
+       c.	Drought
+       d.	Earthquake
+
+
+
+
+
+
+
+=Refined Version of Environments=
+1.      Desert
+Is dry and has a limited water supply.  Only certain plants and animals can survive here.
+
+o	Vegetation Capacity: 200
+•	Jungle
+o	A very diverse biome filled with water and plants.  Very hard to maintain, as the diversity can cause difficulty in balancing.
+o	Vegetation Capacity: 800
+•	Grasslands
+o	Good plant-life, and fair diversity.  Water is clean, and is the more balanced biome overall.  Easy to maintain and disrupt the balance.
+o	Vegetation Capacity: 1000
+•	Arctic
+o	Clean water, high water specie variety, low plant-life.
+o	Vegetation Capacity: 400
+Types of seasons
+•	Spring
+o	Higher chance of rain/flooding
+o	Higher rate of plant growth
+•	Summer
+o	Higher chance of drought
+o	Higher chance of wildfire
+•	Fall
+o	Plant-life slowly decays
+•	Winter
+o	Slower build and growth rates
+Disasters
+•	Flood
+•	- Is an event that affects plants and larger land animals.  Trees are not affected.
+•	- This cannot be managed during its occurrence (have to let it run its course), and will have an icon representing it happening.
+•	
+•	Fires
+•	- Depending on how we setup the game, fires will be natural, or player-spawned
+•	- If natural, all players in a certain area will receive a notification regarding the fire
+•	- Fires may spread to another tile if not contained by the tile’s owner(s)
+•	- If users create fires, then the fire cannot spread, but rather continue to damage the tile until put out by the tile’s owner(s)
+
+
+
+
+=Server Requirements:=
+	The server shall take in and process requests, retrieve information from the database, and return the information back to the client. Server side shall have a clock and send disaster, season change, and disease responses to clients via the standard protocol. Since these changes can have an effect on environment score, the increased or decrease in biomass will be input into the simulation engine and return biomass of all species in the particular foodweb. High biomass will yield high environment score and vice-versa.
+	
+
+=2. Objects(subject to change)=
+
+	 
+
+=3. Milestones=
+By 4/8 Finish 	EnvironmentController and DisasterController
+
+By 5/6 Finish SeasonsController and DiseasesController
