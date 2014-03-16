@@ -1,5 +1,5 @@
 #labels Lobby,Interface
-#Lobby Interface Requirements
+# Lobby Interface Requirements
 = Map/Lobby Interface Requirements and Specifications: =
 ===Steven T. Ramzel===
 ==Tasks:==
