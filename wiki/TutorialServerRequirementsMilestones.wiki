@@ -1,0 +1,40 @@
+Requirement Specification and Milestone Assignment for Tutorial as Part of Server Development
+Kenneth Robertson
+3/13/2014
+CSC 0631
+
+Link to Document At: https://ilearn.sfsu.edu/ay1314/mod/forum/discuss.php?d=122122
+
+	We plan on creating a two level tutorial system.  This tutorial will be based on what we are calling "sandbox" mode.  Sandbox modes only active player is the one going through the tutorial.  A non-active "dummy" player is also present for the second half of the tutorial.
+	The first half of the tutorial is about teaching the player to manipulate the ecosystem, understand food webs, biomass, ecological health score, etc.  This will be done using interface components, especially guis, set goals, and restricting player actions.  The second half of the tutorial focuses on the mechanics of battle.  We will use the "dummy" player as a means to illustrate combat in the absence of any real competition.
+	In the short term we are working on developing what goals, prompts, and interface indicators we will use to create a comprehensive tutorial.  As the code begins to be written, we will begin to put the various elements together.
+	As a last result, if all else fails, we have a back up plan to create and display videos, inside the game, that teach the player how to play, however I fully expect to get the sandbox and gui instruction tutorial working.
+	As a member of the server team it will be my job to make sure that the calls to create the tutorial game mode and to communicate with the tutorial player are functional.  Other server/client communication will be necessary as the player completes goals and advances.  Additionally I must ensure that the game engine functions correctly with our tutorial mode.  Its still not entirely clear exactly what form these functional requirements will take, certainly there will need to be requestTutorial/respondTutorial classes, but beyond that much of the functionality should be available as a byproduct of having a working game.
+
+Classes
+requestTutorialIsCompleted:
+Will inform the server that the user has completed the tutorial, and will store that fact in the players account database.
+respondTutorialIsCompleted:
+This will simply verify to the client that the server received and processed the request.
+requestTutorialCompletionState:
+Will server to inform the server that the client wants to know if the a player has completed the tutorial.
+respondTutorialCompletionState:
+Will tell the client that that the user has completed the tutorial, so that the interface can place something like a checkmark next to the start tutorial menu option.
+Other Classes:
+Other classes allready created should be capable of handling the additional request the client will need from the server.
+
+
+
+Server Requirements for Tutorial
+server calls to create the tutorial game mode world
+server calls to request players progress through tutorial
+communication between game engine and tutorial game mode
+
+Tutorial Milestone
+||*Milestone*||*Date to be completed*||*Priority*||
+||Develop storyboard and use cases for ecosystem tutorial||03/21/14||1||
+||Develop storyboard and use cases for battle tutorial||03/28/14||2||
+||Develop a test environment for the creation of the tutorial prompts||03/21/14||2||
+||Implement tutorial in test environment||04/4/14||2||
+||Develop sandbox mode||TBA (depends on other groups progress)||1||
+||Integrate tutorial prompts and goals with sandbox mode||TBA (depends on other groups progress)||1||
