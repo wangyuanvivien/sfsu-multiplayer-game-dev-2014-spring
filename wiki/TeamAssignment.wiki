@@ -1,6 +1,8 @@
 #summary Current team assignments
 
 = Team Assignment =
+(current as of March 16, 2014)
+
 
 == Tech Team Leads ==
 
@@ -55,3 +57,7 @@
    * Content: John
    * DB: Robin
    * Interface: Junghwan
+
+
+=== Sources: ===
+[https://ilearn.sfsu.edu/ay1314/mod/forum/discuss.php?d=112993 Old list from iLearn]
