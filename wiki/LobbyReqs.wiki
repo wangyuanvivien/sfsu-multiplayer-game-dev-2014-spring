@@ -3,3 +3,5 @@
 ==Members (Functionality)==
 
 [ycheng Ye Cheng (Server)]
+
+[LobbyInterfaceReqs Steven T. Ramzel (Interface)]
