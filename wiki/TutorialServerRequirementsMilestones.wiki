@@ -5,11 +5,16 @@ CSC 0631
 
 Link to Document At: https://ilearn.sfsu.edu/ay1314/mod/forum/discuss.php?d=122122
 
-	We plan on creating a two level tutorial system.  This tutorial will be based on what we are calling "sandbox" mode.  Sandbox modes only active player is the one going through the tutorial.  A non-active "dummy" player is also present for the second half of the tutorial.
-	The first half of the tutorial is about teaching the player to manipulate the ecosystem, understand food webs, biomass, ecological health score, etc.  This will be done using interface components, especially guis, set goals, and restricting player actions.  The second half of the tutorial focuses on the mechanics of battle.  We will use the "dummy" player as a means to illustrate combat in the absence of any real competition.
-	In the short term we are working on developing what goals, prompts, and interface indicators we will use to create a comprehensive tutorial.  As the code begins to be written, we will begin to put the various elements together.
-	As a last result, if all else fails, we have a back up plan to create and display videos, inside the game, that teach the player how to play, however I fully expect to get the sandbox and gui instruction tutorial working.
-	As a member of the server team it will be my job to make sure that the calls to create the tutorial game mode and to communicate with the tutorial player are functional.  Other server/client communication will be necessary as the player completes goals and advances.  Additionally I must ensure that the game engine functions correctly with our tutorial mode.  Its still not entirely clear exactly what form these functional requirements will take, certainly there will need to be requestTutorial/respondTutorial classes, but beyond that much of the functionality should be available as a byproduct of having a working game.
+        We plan on creating a two level tutorial system.  This tutorial will be based on what we are calling "sandbox" mode.  Sandbox modes only active player is the one going through the tutorial.  A non-active "dummy" player is also present for the second half of the tutorial.
+
+        The first half of the tutorial is about teaching the player to manipulate the ecosystem, understand food webs, biomass, ecological health score, etc.  This will be done using interface components, especially guis, set goals, and restricting player actions.  The second half of the tutorial focuses on the mechanics of battle.  We will use the "dummy" player as a means to illustrate combat in the absence of any real competition.
+
+        In the short term we are working on developing what goals, prompts, and interface indicators we will use to create a comprehensive tutorial.  As the code begins to be written, we will begin to put the various elements together.
+
+        As a last result, if all else fails, we have a back up plan to create and display videos, inside the game, that teach the player how to play, however I fully expect to get the sandbox and gui instruction tutorial working.
+
+        As a member of the server team it will be my job to make sure that the calls to create the tutorial game mode and to communicate with the tutorial player are functional.  Other server/client communication will be necessary as the player completes goals and advances.  Additionally I must ensure that the game engine functions correctly with our tutorial mode.  Its still not entirely clear exactly what form these functional requirements will take, certainly there will need to be requestTutorial/respondTutorial classes, but beyond that much of the functionality should be available as a byproduct of having a working game.
+
 
 *Classes*
 
