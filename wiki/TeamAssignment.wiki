@@ -1,0 +1,57 @@
+#summary Current team assignments
+
+= Team Assignment =
+
+== Tech Team Leads ==
+
+   * Client Team Lead: *Steve* (*Danny* is an assistant Lead)
+   * Server Team Lead: *Arthur*
+   * Protocol Team Lead: *David*
+   * Content Team Lead: *Justina*
+   * DB Team Lead: *Keith*
+   * Interface Team Lead: *Steve*
+
+== 1. Lobby and Hexagon Tile Map world ==
+
+   * Client: Kiril, Robert
+   * Server: *Ye*
+   * Protocol: Ariunbayar
+   * Content: (n/a)
+   * DB: Kevin
+   * Interface: Steve
+
+== 2. Data Visualization ==
+
+   * Client: Chris, Danny
+   * Server: Arthur
+   * Protocol: David
+   * Content:  *Justina*
+   * DB: Joseph
+   * Interface: Yuan
+
+== 3. Battle (Natural habitat) User Interface and Game Logic ==
+
+   * Client: *Scott*, Kailee, Nick
+   * Server: Lowell
+   * Protocol: Mehnaz
+   * Content: Justina
+   * DB: Keith
+   * Interface: Alten
+
+== 4. Natural environment, disease, disaster, season changes, fire handler ==
+
+   * Client: *Dylan*, Ozan
+   * Server: Marco
+   * Protocol: Zi Sheng
+   * Content: Kason
+   * DB: Naimah
+   * Interface: Andrew
+
+== 5. Tutorial Game Team ==
+
+   * Client: George, Harry
+   * Server: *Kenneth*
+   * Protocol: Yinghao, Xuning
+   * Content: John
+   * DB: Robin
+   * Interface: Junghwan
