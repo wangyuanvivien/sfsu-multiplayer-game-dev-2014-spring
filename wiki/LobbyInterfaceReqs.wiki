@@ -1,0 +1,75 @@
+#labels Lobby,Interface
+#Lobby Interface Requirements#
+= Map/Lobby Interface Requirements and Specifications: =
+===Steven T. Ramzel===
+==Tasks:==
+  ===1.Display a login page.===
+  ===2.Send a request to login.===
+  Components Required: Client >> Protocol >> Server >> Database
+  Requires: void RequestLogin(String username, String password), Send a request to login.
+  ===3.Receive message for successful login.===
+    Components Required: Client >> Protocol >> Server >> Database
+    Requires: void ResponseLogin(), Receives a message when the client successfully logs in.
+  ===4.Change to game scene with successful login.===
+    Components Required: Client
+    Requires: LoadGame(String username), Changes scenes and initializes gameplay for the given user.
+  ===5.Allow user to register an account===
+    Components Required: Client >> Protocol >> Server
+    Requires: Register(String username, String password), Recieve a message when the client is updated with the player’s 
+  ===6.Display a pane that hold the current environment score and biomass-points.===
+    Components Required: Client >> Protocol >> Server >> Database, Content
+    Requires: PlayerStatus ClientUpdate(), Recieve a message when the client is updated with the player’s current current environment score and biomass-points.
+  ===7.Display a button to open a store dialog to purchase biomass of species from the store using battle biomass points with biomass.===
+    Components Required: Client >> Protocol >> Server >> Database
+    Requires: SpeciesInfo[] getAllSpecies(), Returns a list of species, their type (vegetation or not), their minimum biomass (average adult weight), the specie’s prey, and the specie’s predators.
+    Components Required: Client >> Protocol >> Server >> Content, Database
+    Requires: void RequestPurchase(int biomasspoints, int speciesID), Request an exchange of biomass-points for additional biomass in a player’s personal ecosystem given a player’s ID, the species’ ID, and the amount of biomass.
+  ===8.Display a pane that holds a visualization of the player’s personal ecosystem.===
+    Components Required: Client (Visualization)
+    Requires: DrawVisualiztion(String username, int x1, int y1, int x2, int y2), Draw a visualization given a player ID to the screen in a given box, which is described by an x offset y offset, length , and height.
+  ===9.Display a pane that holds a list of species and their mass present in the personal ecosystem.===
+  ===10.Display GUI pane for chat/lobby messaging===
+    Components Required: Client >> Protocol >> Server
+    Requires: void RequestChat(String message), String ResponseChat(), Recieve updates when new chat messages are recieved and send messages given a string.
+==Objects:==
+  ===LobbyGUI===
+  LobbyGUI holds all other GUI panes and updates them when the client receives and updated ecosystem state.
+  ===GUIPane===
+  Super class of all GUI panes.
+  ===PEVisualizationPane===
+  A PEVisualizationPane displays a visualization given a player’s  ecosystem.
+  ===ScorePane===
+  ScorePane Display a pane that hold the current environment score and biomass-points.
+  •Display a button to open a store dialog to purchase biomass of species from the store using battle biomass points with biomass.
+  ===BiomassPane===
+  Biomass panes display a pane that holds a list of species and their mass present in the personal ecosystem.
+  ===StorePane===
+  StorePane displays a list of all species the user can buy and allows the player to spend biomass-points. This can also be used in the battle system by only listing available species with biomass in the personal ecosystem.
+  •Store will display SpeciesPane and update it when a species is selected.
+  •Store will also highlight predator and prey of the species selected.
+  ===SpeciesPane===
+  Species pane will show information on a species and can be also be used by the battle system.
+  ===ChatPane===
+  ChatPanes allow the user to enter and send text as well as display messages from other users.
+  ===SpeciesInfo===
+  Data structure to hold all info of a species..
+==Milestones:==
+  ===Week 1:===
+  •Create layout design.
+  •Create scaffold objects.
+  •Create blank GUI panes.
+  ===Week 2:===
+  •Create all buttons and scaffold methods
+  ===Week 3:===
+  •Create login page.
+  ===Week 4:===
+  •Complete button methods.
+  •Create biomass store.
+  ===Week 5:===
+  •Allow GUI to receive updates about player status and new chat messages.
+  ===Week 6:===
+  •Allow GUI elements to initiate battle, and send chat messages.
+  ===Week 7:===
+  •Create registration page.
+  ===Week 8:===
+  •Finish GUI interactions
