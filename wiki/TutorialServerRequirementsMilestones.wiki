@@ -11,24 +11,35 @@ Link to Document At: https://ilearn.sfsu.edu/ay1314/mod/forum/discuss.php?d=1221
 	As a last result, if all else fails, we have a back up plan to create and display videos, inside the game, that teach the player how to play, however I fully expect to get the sandbox and gui instruction tutorial working.
 	As a member of the server team it will be my job to make sure that the calls to create the tutorial game mode and to communicate with the tutorial player are functional.  Other server/client communication will be necessary as the player completes goals and advances.  Additionally I must ensure that the game engine functions correctly with our tutorial mode.  Its still not entirely clear exactly what form these functional requirements will take, certainly there will need to be requestTutorial/respondTutorial classes, but beyond that much of the functionality should be available as a byproduct of having a working game.
 
-Classes
-requestTutorialIsCompleted:
-Will inform the server that the user has completed the tutorial, and will store that fact in the players account database.
-respondTutorialIsCompleted:
-This will simply verify to the client that the server received and processed the request.
-requestTutorialCompletionState:
-Will server to inform the server that the client wants to know if the a player has completed the tutorial.
-respondTutorialCompletionState:
-Will tell the client that that the user has completed the tutorial, so that the interface can place something like a checkmark next to the start tutorial menu option.
-Other Classes:
-Other classes allready created should be capable of handling the additional request the client will need from the server.
+*Classes*
+
+*requestTutorialIsCompleted:*
+
+   * Will inform the server that the user has completed the tutorial, and will store that fact in the players account database.
+
+*respondTutorialIsCompleted:*
+
+   * This will simply verify to the client that the server received and processed the request.
+
+*requestTutorialCompletionState:*
+
+   * Will server to inform the server that the client wants to know if the a player has completed the tutorial.
+
+*respondTutorialCompletionState:*
+
+   * Will tell the client that that the user has completed the tutorial, so that the interface can place something like a checkmark next to the start tutorial menu option.
+
+*Other Classes:*
+
+   * Other classes allready created should be capable of handling the additional request the client will need from the server.
 
 
 
-Server Requirements for Tutorial
-server calls to create the tutorial game mode world
-server calls to request players progress through tutorial
-communication between game engine and tutorial game mode
+
+*Server Requirements for Tutorial*
+   * server calls to create the tutorial game mode world
+   * server calls to request players progress through tutorial
+   * communication between game engine and tutorial game mode
 
 Tutorial Milestone
 ||*Milestone*||*Date to be completed*||*Priority*||
