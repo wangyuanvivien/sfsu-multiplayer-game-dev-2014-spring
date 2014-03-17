@@ -1,50 +1,77 @@
 #summary Requirements Documentation; Ye Cheng
 =Requirement Specification and Milestones=
 
-==Lobby and Hexagon Tile World Team==
-
-==Server Part==
+==Lobby and Hexagon Tile World Team, Server==
 
 ===Ye Cheng===
 
-1. Requirements
-           Server shall work with client, simulation and database side to fulfill the following requirements:
-    * The server shall receive the login request from player, connect the database to verify, send back response (login successful or not) to the client.
-    * The server shall wait for the client’s request to enter a proper model.
-    * The server shall respond to the player’s ecosystem care request and pass it to the simulation engine. After getting results from the simulation engine, the server will send data back to client to display.
-    * The server shall respond to the player’s battle model request and pass it to the battle component for processing. After getting response from battle component, the server will frequently make response to the client to display battle details.
-    * The server shall support different protocols:
-         * Log in information (id and password).
-         * Player’s information (level, biomass points etc.).
-         * Request a personal ecosystem care or battle model:
-         * Personal ecosystem care: provide protocol for getting back information from simulation engine the growth information of different species, requesting to purchase new species, requesting to get history information.
-         * Battle: provide protocol to get result for battle model from battle component.
-         * Chat information (from server and other players)
-         * Shop information (purchase new species)
-
-    * The server shall connect with database to retrieve:
-         * Player’s information: id, password, biomass points, level.
-         * Species’s information: name, detail, unlocked or not, quantity.
-         * Tile information: owner, position, biomass.
-2. Component Design
-           Server will focus on implementing the following protocols. Proper functions and classes may be added during implementation.
-
-    * RequestLogin, ResponseLogin
-    * RequestPlayer, ResponsePlayer
-    * RequestChat, ResponseChat
-    * RequestMap, ResponseMap
-    * RequestTile, ResponseTile
-    * RequestSpecies, ResponseSpecies
-    * RequestPersonal, ResponsePersonal
-    * RequestSimulation, ResponseSimulation
-    * RequestUnlock, ResponseUnlock
-    * RequestShop, ResponseShop
-    * RequestBattleInit, ResponseBattleInit
-    * ReqeustBattleProcess, ResponseBattleProcess
-    * RequestBattleResult, ResponseBattleResult
-    * RequestTraining, ResponseTraining
-3. Deliverables
-
-           This needs to be discussed with other members in the team to finalize
-    * By 4/8: Game map, request and response protocols ready, DB table ready, interface ready
-    * By 5/6: integration test and debugging
+  1. Requirements: 
+    _Server shall work with client, simulation and database side to fulfill the following requirements:_
+  * Log in and register requirements:
+        * The server shall receive the register request from player, connect the database to set up a new account, send back response (register successful message) via protocol to the client
+        * The server shall receive the log in request from player, connect the database to verify, send back response (log in successful or not) via protocol to the client.
+  * Game model requirements: The server shall wait for the client’s request to enter one of the following game model.
+        * The server shall respond to the player’s ecosystem care request and pass it to the simulation engine. After getting results from the simulation engine, the server will send data back to client to display.
+        * The server shall respond to the player’s battle model request and pass it to the battle component for processing. After getting response from battle component, the server will frequently make response to the client to display battle details.
+  * The server shall support the following protocols:
+        * Log in and register information (id, password, birthday, email). 
+        * Player’s information (level, biomass points, available species, tiles, species unlocked, species remain to unlock.). 
+        * Request a personal ecosystem care or battle model:
+             * Personal ecosystem care: connect protocol for getting back information from simulation engine the growth information of different species, requesting to purchase new species, requesting to get history / status information.
+             * Battle: provide protocol to get result of battle model from battle component.
+        * Chat information (from server and other players)
+        * Shop information (purchase new species)
+        * Heartbeat information
+  * The server shall connect with database to retrieve the folowing detail information: 
+        * Species’s information: name, detail, unlocked or not, quantity, biomass.
+        * Tile information: owner, position, biomass, environment.
+  2. Component Design: 
+    _Server will focus on implementing the following components / objectives. Primary protocols and functions are listed. Proper functions and classes may be added during pratical implementation. Bold ones are newly added classes compared to the previous game. Modification will be made to existing objects to accommodate the newly game design._
+  * networking package:
+        * request: contains _parse()_ and _doBusiness()_
+            * RequestLogin
+            * RequestRegister
+            * RequestPlayer
+            * RequestChat
+            * RequestMap
+            * RequestTile
+            * RequestSpecies
+            * RequestPrediction
+            * RequestUnlock
+            * RequestShop
+            * *RequestBattleInit*
+            * *ReqeustBattleProcess*
+            * *RequestBattleResult*
+            * *RequestTutorail*
+      * response:
+            * ResponseLogin
+            * ResponseRegister
+            * ResponsePlayer
+            * ResponseChat
+            * ResponseMap
+            * ResponseTile
+            * ResponseSpecies
+            * ResponsePrediction
+            * ResponseUnlock
+            * ResponseShop
+            * *ResponseBattleInit*
+            * *ResponseBattleProcess*
+            * *ResponseBattleResult*
+            * *ResponseTutorial*
+  * core package:
+        * *Tiles*
+        * *BattleManager*
+  * metadata package:
+        * GameRequestTable
+  * model package
+        * Player
+3. Deliverable and milestones:
+    _This needs to be discussed with other members in the team to finalize_
+  * By 3/21: finalize the interface for battle model, finish codes for tutorial request and response (*priority 1*)
+  * By 3/28: finish coding for battle model related request and response (*priority 1*)
+  * By 4/4: finish coding for sending game model related message (*priority 2*), start testing integration within lobby / game map team (*priority 1*)
+  * By 4/11: finish coding for sending chat (*priority 2*), start testing and integration with other teams (*priority1*)
+  * By 4/18: debug and trouble shooting (*priority 1*)
+  * By 4/25: discuss within team to add new features (*priority 3*)
+  * By 5/2: finalize game
+  * By 5/9: present game
