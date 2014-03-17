@@ -74,7 +74,7 @@ Zi sheng Wu – Environment Team – Protocol Team
   * ResponseSeasonChange
   * ResponseUpdateWeatherPrediction	
  * *By Apr 15*
-  * Modify or Add more protocols as Server and Client required.	
+  * To modify or add more protocols as Server and Client required.	
  * *By Apr 29*
   * To be Determined	
  * *By May 13*
