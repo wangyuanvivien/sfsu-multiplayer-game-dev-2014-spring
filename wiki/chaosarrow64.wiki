@@ -1,0 +1,122 @@
+#summary Requirement Specification and Milestones for Kason
+
+= Requirement Specification and Milestones =
+
+Kason Soohoo
+
+*Natural Environment Component Team*
+
+*Content Technical Team*
+
+Revised: 17 March 2014
+
+== 1.  High-Level Tasks ==
+
+=== Content tasks: ===
+  * Create a UI to simplify interaction with the simulation engine
+  * Test various combinations of species using the simulation engine to determine which combinations result in a balanced ecosystem
+  * Find acceptable modifiers for terrains’ effects on species’ biomass and growth rates
+  * Find acceptable modifiers for natural events’ effects on species’ biomass and growth rates
+  * Find acceptable modifiers for seasons’ effects on species’ biomass and growth rates
+
+=== Natural Environment tasks: ===
+  * Finalize list of natural environment elements to include in high-priority tasks
+  * Define objects required for each element
+  * Implement terrain effect objects
+  * Implement high-priority natural event objects
+  * Implement season objects
+
+
+== 2.  Objects to Be Implemented ==
+
+=== Content objects ===
+
+*SimJob*
+  * Loads jobs to be sent to the simulation engine
+
+*SimResults*
+  * Imports results from simulation engine to a human-readable format
+
+*Database for Simulation Results*
+  * Organized and centralized location for all collected data
+
+=== Natural Environment objects ===
+
+*Terrain*
+
+Modifies species’ biomass and growth rate according to terrain
+
+Types include: Desert, Jungle, Grasslands, Arctic
+
+  * getTerrainType( )
+
+  * getModifier( )
+
+*NaturalEvent (Abstract)*
+
+Modifies species’ biomass and growth rate according to natural events
+  * getEventType( )
+  * getModifier( )
+
+*Fire (extends NaturalEvent)*
+  * Randomly occurs, may be affected by terrain and seasons
+
+*Flood (extends NaturalEvent)*
+  * Randomly occurs, may be affected by terrain and seasons
+
+*Rain (extends NaturalEvent)*
+  * Randomly occurs, may be affected by terrain and seasons
+
+*Season*
+
+Modifies species’ biomass and growth rate according to changes in seasons
+
+Seasons include: Spring, Summer, Fall, Winter
+
+  * getSeason( )
+  * getModifier( )
+
+
+== 3.  Milestones ==
+
+=== March 20th: ===
+
+*Content*
+  * SimResults.ImportSimResults( )
+
+*Natural Environment*
+  * Finalize list of natural environment elements to include in high-priority tasks
+  * Define objects required for each element
+
+=== March 27th: ===
+
+*Content*
+  * Learn DB
+
+*Natural Environment*
+  * Create Terrain objects and methods to acquire modifiers
+
+=== April 3rd: ===
+
+*Content*
+  * Run simulations
+
+*Natural Environment*
+  * Create NaturalEvent objects and methods to acquire modifiers
+
+=== April 10th: ===
+
+*Content*
+  * SimJobs DB; SimJob.SaveSimeJob( ); SimJob.LoadSimJobs( )
+
+*Natural Environment*
+  * Create Season objects and methods to acquire modifiers
+
+=== April 17th – May 8th: ===
+
+*Content*
+  * Run simulations
+  * Test and refine GUI
+
+*Natural Environment*
+  * Create additional NaturalEvents, including player controlled events
