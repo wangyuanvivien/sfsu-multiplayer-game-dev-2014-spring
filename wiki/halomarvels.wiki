@@ -1,0 +1,68 @@
+Andrew Wong: Interface Designer for Natural Environment, Disease, Disaster, Etc
+3/17/14
+
+Milestones Plan
+
+Requirements
+Art Support Requirement
+- Different natural disasters and events shall have separate icons to signify each individually
+- Tiles may have certain sprites added due to events or disease
+- Different seasons can affect the visual look of tiles
+- Create methods to produce on-screen alerts
+- Create methods to animate/show events on tiles
+
+Components
+NaturalEventsAlert(string eventType)
+-Animates and shows notification of natural events.
+- It will take a string from the Show(Event Name) methods, such as showFire, and utilize a switch statement that will display a message in respect to which event is occurring.
+-Potentially considering giving an array of strings if we expect multiple events occurring often.  If not, then a single string should be sent.
+
+ShowDisease(boolean diseaseBool, string diseaseType)
+- Disease: Create visual displays for infected areas on tiles when true, based on whether infection is towards animals, plants, or the terrain.  This is done via switch statement.
+- After displaying the effect on tile, method sends “diseaseAnimals”, “diseasePlants”, or “diseaseTerrain” string to NaturalEventsAlert, depending on the type occurring.
+- If false is received, then the specific disease-effect is removed from tile.
+
+ShowHurricane(boolean hurricaneBool)
+- Hurricane: Create visual effects on tiles when true, and after displaying the effect on tile, method string “hurricane” to NaturalEventsAlert for user to be told of natural disaster occurring
+- If false is received, then hurricane is removed from tile.
+
+ShowFlood(boolean floodBool)
+- Flood: Create visual effects on tiles when true, and after displaying the effect on tile, string “flood” to NaturalEventsAlert  for user to be told of natural disaster occurring.
+- If false is received, then flood is removed from tile.
+
+ShowFire(boolean fireBool)
+- Fire:  Create visual effects on tiles when true, and after displaying the effect on tile, string “fire” to for user to be told of natural disaster occurring.
+- If false is received, then fire is removed from tile.
+
+ShowSnow(boolean snowBool)
+- Snowfall: Create visual effects on tiles when true, and after displaying the effect on tile, string “snow” to for user to be told of natural disaster occurring.
+- If false is received, then snow is removed from tile.
+
+ShowDrought(boolean droughtBool)
+- Snowfall: Create visual effects on tiles when true, and after displaying the effect on tile, string “drought” to for user to be told of natural disaster occurring
+- If false is received, then drought visual-effect is removed from tile.
+ 
+Seasons
+ShowSpring(boolean springBool)
+- Spring: Will enable the speedup of plant-life organisms.  Can also increase the likelihood of floods if random.  Will create icons to represent the effects on tiles as they occur.  Additionally, notifications as to the season should appear, by sending string “spring” to NaturalEventsAlert.
+
+ShowSummer(boolean summerBool)
+- Summer: Will enable the potential for drought, and an increased likelihood for wildfires.  Will create icons to represent the effects on tiles as they occur.  Additionally, notifications as to the season should appear, by sending string “summer” to NaturalEventsAlert.
+
+ShowFall(boolean fallBool)
+- Fall: Plant-life will gradually decay.  Will create icons to represent the effects on tiles as they occur.  Additionally, notifications as to the season should appear, by sending string “fall” to NaturalEventsAlert.
+
+ShowWinter(boolean winterBool)
+- Winter: All build times are gradually slowed down during this period.  Will create icons to represent the effects on tiles as they occur.  Additionally, notifications as to the season should appear, by sending string “winter” to NaturalEventsAlert.
+
+Milestones:
+M1:
+1. Learn about how to create animations from sprite sheets (3/20)
+2. Create usable sprite sheets and alert boxes for several disasters (3/27)
+3. Successfully enable placeable animated disasters (4/3)
+
+M2:
+1. Implement methods that allow Client Developers to call to display and enable disasters (4/10)
+2. Implement methods that produce visual alerts based on which event is active (4/17)
+3. Begin combining of disasters with Battle/Tile Team if possible (4/24)
+4. Finalize any visual aspects remaining (5/1)
