@@ -1,4 +1,4 @@
-#summary Natural Environment Interface and GUI Milestones
+#summary Natural Environment Interface and GUI Requirements Document
 Andrew Wong: Interface Designer for Natural Environment, Disease, Disaster, Etc
 3/17/14
 
