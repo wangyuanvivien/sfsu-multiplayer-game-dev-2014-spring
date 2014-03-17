@@ -1,5 +1,4 @@
-#labels NaturalEnvironment
-#Summary Natural Environment Interface and GUI Milestones
+#summary Natural Environment Interface and GUI Milestones
 Andrew Wong: Interface Designer for Natural Environment, Disease, Disaster, Etc
 3/17/14
 
