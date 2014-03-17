@@ -1,0 +1,86 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Add your content here.
+Client Lobby
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+Requirement Specifications
+
+Client: Lobby and Hexagon Tile Map World
+
+Robert Moon
+
+Client team shall initialize World of Balance by making the proper requests to the server to start the game.
+
+Client team shall request the proper login or registration information to allow player access to play World of Balance.  Client will then send information to server for verification.  Client will then receive response from server.
+
+Client team shall request the player’s avatar list of information from the server.  Client will then display server response. 
+
+Client team shall request the player’s badges/accomplishments from the server.  Client will then display player’s information. 
+
+Client team shall request charts from the data visualization team in order to display information to the player.  Client will then display information.  
+
+Client team shall request chat services from server.  Client will then initiate chat with other players.
+
+Client team shall request other players playing the game from the server.  Client will then display this information to the player in order to initiate chat or battle.   
+
+Client team shall request the heartbeat from the server to constantly update the lobby and tile map world.  
+
+Client team shall request the High Score to display the World of Balance top score from the server.  Client will then display this information to player.  
+
+Client shall request predictions from the server.  Client will then inform player of these predictions.  
+
+Client shall request when both players are ready to battle.  If so, then the client will initiate battle.  
+
+Client shall request from server appropriate shop information.  Client will then inform server of actions, selections, and purchases. 
+
+Client shall constantly request updates to the Species List and World List.  Client will then update the information presented to player.  
+
+When battle is over, client will send information/results to server to update World of Balance information..  Client will then direct player to proper screens and options. 
+
+Objects
+
+Object: AvatarList
+Classes: RequestAvatarList/ResponseAvatarList
+Functions: constructors, send(), parse(), process().
+
+Object: Player information
+Classes: RequestBageList, RequestChart, RequestGetPlayers, RequestHeartbeat, 	RequestHighScore,.
+Functions: constructor, send
+
+Object: Error
+	RequestErrorLog.
+Functions: constructor, send().
+
+Object: Game State
+Classes: RequestLogin/ResponseLogin, RequestRegister/ResponseRegister, 	RequestExitGame,  RequestReady/ResponseReady, ResponseUpdateTime.
+Functions: constructor, send(), parse(), process().
+
+Object: Shop
+Classes: RequestShop/ResponseShop, RequestShopAction/ResponseShopAction, 
+Functions: constructor, send(), parse(), process()
+
+Object: Species
+Classes: RequestSpeciesAction/ResponseSpeciesAction, ResponseSpecieCreate, 	ResponseSpeciesList.
+Functions: constructor, send(), parse(), process().
+
+Object: World
+Classes: RequestWorldList/ResponseWorldList, 	RequestWorldMenuAction/ResponseWorldMenuAction.
+Functions: constructor, parse(), process().
+
+Milestones
+
+Priority 1 
+
+March 31, 2014: Finish registration, login, update general information about World 			of Balance statistics, tiles, and game map.
+
+April 30, 2014: Finish chat room, initiating battle with other players.
+
+Last day of class: Rest of requirements fulfilled for a full working game!
