@@ -1,4 +1,4 @@
-#summary Requirement Specification and Milestones for Kason
+#summary Requirement Specification and Milestones for Natural Environment/Content
 
 = Requirement Specification and Milestones =
 
@@ -49,7 +49,6 @@ Modifies species’ biomass and growth rate according to terrain
 Types include: Desert, Jungle, Grasslands, Arctic
 
   * getTerrainType( )
-
   * getModifier( )
 
 *NaturalEvent (Abstract)*
@@ -59,13 +58,16 @@ Modifies species’ biomass and growth rate according to natural events
   * getModifier( )
 
 *Fire (extends NaturalEvent)*
-  * Randomly occurs, may be affected by terrain and seasons
+
+Randomly occurs, may be affected by terrain and seasons
 
 *Flood (extends NaturalEvent)*
-  * Randomly occurs, may be affected by terrain and seasons
+
+Randomly occurs, may be affected by terrain and seasons
 
 *Rain (extends NaturalEvent)*
-  * Randomly occurs, may be affected by terrain and seasons
+
+Randomly occurs, may be affected by terrain and seasons
 
 *Season*
 
@@ -88,21 +90,14 @@ Seasons include: Spring, Summer, Fall, Winter
   * Finalize list of natural environment elements to include in high-priority tasks
   * Define objects required for each element
 
-=== March 27th: ===
-
-*Content*
-  * Learn DB
-
-*Natural Environment*
-  * Create Terrain objects and methods to acquire modifiers
-
 === April 3rd: ===
 
 *Content*
+  * Learn DB
   * Run simulations
 
 *Natural Environment*
-  * Create NaturalEvent objects and methods to acquire modifiers
+  * Create Terrain objects and methods to acquire modifiers
 
 === April 10th: ===
 
@@ -110,13 +105,24 @@ Seasons include: Spring, Summer, Fall, Winter
   * SimJobs DB; SimJob.SaveSimeJob( ); SimJob.LoadSimJobs( )
 
 *Natural Environment*
-  * Create Season objects and methods to acquire modifiers
+  * Create NaturalEvent objects and methods to acquire modifiers
 
-=== April 17th – May 8th: ===
+=== April 17th: ===
 
 *Content*
   * Run simulations
   * Test and refine GUI
 
 *Natural Environment*
-  * Create additional NaturalEvents, including player controlled events
+  * Create Season objects and methods to acquire modifiers
+
+=== April 24th – May 15th: ===
+
+*Content*
+  * Run simulations
+  * Find values for a stable ecosystem
+  * Find values for effects of environment and natural events
+
+*Natural Environment*
+  * Create additional NaturalEvents
+  * Create player controlled events
