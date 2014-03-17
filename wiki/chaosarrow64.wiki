@@ -1,4 +1,5 @@
-#summary Requirement Specification and Milestones for Natural Environment/Content
+#summary Natural Environment; Content; Requirement Specification and Milestones
+#labels NaturalEnvironment,Content
 
 = Requirement Specification and Milestones =
 
