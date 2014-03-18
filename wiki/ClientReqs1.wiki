@@ -3,7 +3,7 @@
 ==Lobby and Hexagon Tile World Team==
 ===Client Team===
 
-====1.Requirements====
+====Requirements====
 
 Login & Lobby
  * Interact with Interface to display login window for player
@@ -36,7 +36,7 @@ Battle Initiation
  * Interact with Interface to display battle results
 
 
-===2.Objects===
+===Objects===
 PurchaseManager
  * Will manage player’s interactions with the purchase of new species and resources
  * Will communicate with Server to update and store information
@@ -80,7 +80,7 @@ Player
  * Will communicate with Server to receive the player profile and display their tiles and assets
  * Will contain player locations and which tiles/spots are owned by which player as well as overall resources and other general values that are received from Game Logic.
 
-===3.Milestones===
+===Milestones===
 4/1
  * Basic Login/Lobby
  * Basic Map tile system and map generation
