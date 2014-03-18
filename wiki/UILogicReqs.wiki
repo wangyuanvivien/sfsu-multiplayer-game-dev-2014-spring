@@ -2,10 +2,10 @@
 
 ==Members (Functionality)==
 
+*[shongsdu Scott Hongsdusit (Client)]*
+
 [jcotter Justina Cotter (Content)]
 
 [lmilliken Lowell Milliken (Server)]
-
-[shongsdu Scott Hongsdusit (Client)]
 
 [KHendershot Keith Hendershot (Database)]
