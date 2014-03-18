@@ -1,4 +1,5 @@
 Requirement Specifications and Milestones
+
 1.	Requirements
       a.	The game shall offer a GUI for a battle sequence 
       b.	The game shall offer backgrounds for different weather scenarios
