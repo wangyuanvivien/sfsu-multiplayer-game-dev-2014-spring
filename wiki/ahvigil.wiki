@@ -1,4 +1,4 @@
-Requirement Specification and Milestone
+= Requirement Specification and Milestone =
 (Server/Data Visualization)
 by Arthur Vigil
 
