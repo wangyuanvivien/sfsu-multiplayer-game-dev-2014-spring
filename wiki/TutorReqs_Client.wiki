@@ -23,7 +23,7 @@
 
   * *TimeLine* - Keeps track of the player’s progress through the tutorial and determines which tutorial step the player is currently on. Also displays the current tutorial objective and waits for the player to complete it before advancing to the next step. 
 
-  * *TutorialStep* - Parent class to individual tutorial step implementations. Each tutorial step contains a tutorial prompt which is to be displayed to the player. An individual tutorial step is called by TimeLine and returns once the individual tutorial step is completed.
+  * *TutorialStep * - Parent class to individual tutorial step implementations. Each tutorial step contains a tutorial prompt which is to be displayed to the player. An individual tutorial step is called by TimeLine and returns once the individual tutorial step is completed.
 
   * *TutorialPrompt* - Holds a list of tutorial prompts (objectives that the player must complete) represented as text.
 
