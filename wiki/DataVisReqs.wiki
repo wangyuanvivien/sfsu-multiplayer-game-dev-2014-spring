@@ -7,3 +7,5 @@
 [robinsonj Joe Robinson (Database)]
 
 [dhdReqs David Hua (Protocol)]
+
+[DVClientReq Chris Sanchez, Danny Wu (Client)]
