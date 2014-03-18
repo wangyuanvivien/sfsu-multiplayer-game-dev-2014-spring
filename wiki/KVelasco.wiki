@@ -1,0 +1,16 @@
+=Map/Lobby Database Requirements and Specifications= 
+
+===Kevin Velasco===
+
+==Requirements==
+  * Database shall store information about tiles in the map
+  * Database shall know the state of each title e.g. whether a title is    already in battle or not
+  * Tiles shall know adjacent titles to know if initiating a battle is    possible
+
+==Components==
+  * Tile table shall hold information about adjacent tiles and the current state of the tile
+  * DAO shall be created in order for the server to retrieve the information from the database 
+
+===Task===
+  * Understand current database schema 
+  * See what needs to be added in order to support the game feature
