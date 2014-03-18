@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Requirements,Components, and milestones.
 Keith Hendershot – Database Team – Battle Team
 
 
@@ -22,6 +22,4 @@ Keith Hendershot – Database Team – Battle Team
 2.   Maintenance of the database.
 
 3.   Appropriate access schema available upon request from other component teams. 
-
-
 
