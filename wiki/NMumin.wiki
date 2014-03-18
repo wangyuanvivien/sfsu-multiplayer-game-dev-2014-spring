@@ -30,8 +30,10 @@ NaturalPhenomDAO()
 
 
 
-|| *Diseases*|| *disease id* || *name* || *description* ||  *infect_chance* || *spread_chance* || *death_rate* || *heal_chance* ||
-|| || ||    70     ||     60     || 3 - 5 ||   
+|| *Diseases*|| *disease id* || *name* || *description* ||  *infect_chance* _(%)_ || *spread_chance* _(%)_ || *death_rate* _(%)_ || *heal_chance* _(%)_ ||
+|| || 0 ||   plant     ||    Kills plant life gradually     || 30 ||   10 || 0 || 60 ||
+|| || 1 ||   animal ||    Kills animals at rate, or prevents repoduction     || 12 ||   15 || 20 || 60 ||
+|| || 2 ||   fungal ||    makes terrain less productive, reduces biomass    || 20 ||   30 || 0 || 80 ||
 
 
 || *Natural Phenom*  _(%)_|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
