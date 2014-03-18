@@ -9,6 +9,15 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 
 The Database team will store info about each environment, disease, natural phenom, and season. There will need to be wrapper classes used to retrieve and send information to and from the database. 
 
+
+DiseaseDAO()
+
+EnvironmentDAO()
+
+SeasonDAO()
+
+NaturalPhenomDAO()
+
 == DB Schema ==
 ===using hard coded values===
 
@@ -21,9 +30,8 @@ The Database team will store info about each environment, disease, natural pheno
 
 
 
-|| *Diseases*|| *Plant growth rate*  _(%)_ || *Animal Reproduction Rate* _(%)_  ||  *Duration* _(turns)_ ||
-||Animal||     70     ||     60     || 3 - 5 ||   
-||Plant||     60     ||      50     || 3 - 5 ||   
+|| *Diseases*|| *disease id* || *name* || *description* ||  *infect_chance* || *spread_chance* || *death_rate* || *heal_chance* ||
+|| || ||    70     ||     60     || 3 - 5 ||   
 
 
 || *Natural Phenom*  _(%)_|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
