@@ -1,0 +1,55 @@
+==Kailee Kerr – Client Team – Battle Team==
+
+*1. Requirements*
+  * Players shall be able to attack any tile that is touching their already occupied tiles.
+  * Players engaging in battle shall begin either a direct or proxy battle when a battle is declared.
+  * A direct battle shall occur if the tile being attacked is occupied by another user and that user is 		  online and accepts the battle within one minute.	
+  * A proxy battle shall occur if the tile is vacant or if the tile is owned and the owner is offline or 	 	  does not accept the battle within one minute.
+  * Players entering into a proxy battle shall join a global queue for battle matchmaking with 		   another player.
+  * Players shall have three minutes to build a Battle Ecosystem once a battle is initiated.
+  * Battle Ecosystems shall be built using biomass of species from the player’s Personal Ecosystem.
+  * Battle Biomass Points shall be spent in battle in order to retreat species, transfer biomass, or 	  	  destroy biomass.
+  * Battles shall end after 10 turns or when either player’s Battle Ecosystem collapses.
+  * Players shall win the battle if at the end of the battle they have the highest Battle Environment 		  Score.
+  * The loser’s biomass used in their Battle Ecosystem shall be forfeited to the winner at the end 	  	  of the battle, along with the tile being fought over.
+
+*2. Component Design*
+	Battle
+  * Controls game environment during the battle
+  * Interacts with the Unity User Interface displayed to the player
+  * Processes user inputs corresponding to the battle
+  * Monitors each player’s stats and battle ecosystem information
+	BattleRequest
+  * Sends client information to the server about which tile the player wants to attack
+	BattleResponse
+  * Receives response from the server about which type of battle will commence depending on if the enemy player has responded to the battle request
+	BeginBattleRequest
+  * Sends player battle ecosystems that were created to the server
+	BeginBattleResponse
+  * Battle will begin and the current battle state for both players will be reflected in the Unity UI
+	BattleAttackRequest
+  * Send battle request information from client to server
+	BattleAttackResponse
+  * Receives response from the server 
+  * Unity UI is updated according to the response received
+	BattleHeartbeatRequest
+  * Makes sure that a connection is still being made from the client to the server
+  * Sends the status of the players to the server
+	BattleHearbeatResponse
+  * Monitors statuses sent from the client to make sure both players are still in battle, if one player has lost, if a turn has ended, etc. – updates Battle accordingly
+
+*3. Deliverables*
+	Next 4 Weeks:  
+  * 4/1 - Basic GUI and User Interaaction
+  * 4/3 - BattleBeginRequest/Response
+  * 4/8 - Connecting with the server to receive players’ basic stats
+  * 4/10 - Basic HeartbeatResponse/Request working
+  * 4/15 - Creation of basics (GUI) for building a Battle Ecosystem prior to Battle and choosing which animals & biomass to bring into battle
+	Until Deadline: 
+  * 4/17 - Flesh out GUI and User Interaction
+  * 4/22 - Finish Requests and Responses for main Battle
+  * 4/24 - Connect with server for turn attack requests and responses
+  * 4/29 - Battle class, and the sending of the Battle Ecosystem to the client UI
+  * 4/29 - Resolution and distribution of biomass and tiles following a battle
+
+*We will need to work with Natural Environment Team to get the proper stats when the in-game weather changes and the different weather skies for the Unity UI; and the Tile Map for the pre-battle UI, along with Content Team for completion of the Battle Team requirements.
