@@ -112,3 +112,4 @@ Players try to maintain a persistent ecosystem of species they can use to conque
      * Tile control is updated depending on the battle type:
        * For *Direct Battles*: The loser forfeits control of the tile they battled from to the winner.
        * For *Proxy Battles*: Only the winner gains control of the tile they attacked.
+==Natural Environment==
