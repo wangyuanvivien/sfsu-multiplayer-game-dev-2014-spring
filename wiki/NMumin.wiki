@@ -7,11 +7,12 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 
 = Details =
 
+The Database team will store info about each environment, disease, natural phenom, and season. There will need to be wrapper classes used to retrieve and send information to and from the database. 
 
 == DB Schema ==
 ===using hard coded values===
 
-|| *Environments*|| *Plant level* || *Water level* || *Species Diversity* || 
+|| *Environments*|| *Plant level* _(%)_ || *Water level* _(%)_ || *Species Diversity* _(%)_ || 
 ||Desert     ||     30     ||     15     ||         15       ||
 ||Jungle     ||     70     ||      7     ||          6       ||
 ||Grasslands ||     80     ||      6     ||          6       ||
