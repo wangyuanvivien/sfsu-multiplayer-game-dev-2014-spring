@@ -8,14 +8,25 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 = Details =
 
 
-= DB Schema =
+== DB Schema ==
+===using hard coded values===
 
 || *Environments*|| *Plant level* || *Water level* || *Species Diversity* ||
 ||Desert     ||     30%     ||     15%     ||         15%       ||
 ||Jungle     ||     70%     ||      7%     ||          6%       ||
 ||Grasslands ||     80%     ||      6%     ||          6%       ||
 ||Artic      ||     15%     ||      9%     ||          3%       ||
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+
+
+|| *Season*|| *Plant growth rate* || *Animal Reproduction Rate* || *Drought chance* || *Wildfire Chance* ||
+||Spring||     70%     ||     60%     ||         5%       || 5% ||
+||Summer||     60%     ||      50%     ||          65%       || 75% ||
+||Winter||     10%     ||      60%     ||          0%       || 0% ||
+||Fall||     25%     ||      30%     ||          2%       || 75% ||
+
+
+
+|| *Diseases*|| *Plant growth rate* || *Animal Reproduction Rate* ||
+||Animal||     70%     ||     60%     ||     
+||Plant||     60%     ||      50%     ||     
