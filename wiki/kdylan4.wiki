@@ -8,52 +8,52 @@ Natural Environment : Client member
 
 ===Requirements===
 *The Natural Environment team shall create these different environments:*
-  *Desert : Limited water supply, only certain species can thrive here
-  *Jungle : Lots of Plants, plenty of water, high number of species
-  *Grasslands : easy to maintain, good amount of plants and water
-  *Arctic : low amount of plants, lots of water, limited number of species
+  * Desert : Limited water supply, only certain species can thrive here
+  * Jungle : Lots of Plants, plenty of water, high number of species
+  * Grasslands : easy to maintain, good amount of plants and water
+  * Arctic : low amount of plants, lots of water, limited number of species
 
 *The Natural Environment team shall create the following seasons*
-  *Spring : plants grow faster
-  *Summer : possibility of drought and wildfire
-  *Fall : Plant growth slows
-  *Winter : less plant growth, animal reproduction slows
+  * Spring : plants grow faster
+  * Summer : possibility of drought and wildfire
+  * Fall : Plant growth slows
+  * Winter : less plant growth, animal reproduction slows
 
 *The Natural Environment team shall create the following events*
-  *Animal Disease : Kills off certain animals at a certain rate, or prevents reproduction
-  *Plant Disease : Kills off plant-life gradually
-  *Terrain Disease : Kills both plant and animals
-  *Drought : decrease the amount of water
-  *Flood : raise water to an unstable level
-  *Tornado : Kill of a percentage of animals
-  *Wildfire : like Tornado
+  * Animal Disease : Kills off certain animals at a certain rate, or prevents reproduction
+  * Plant Disease : Kills off plant-life gradually
+  * Terrain Disease : Kills both plant and animals
+  * Drought : decrease the amount of water
+  * Flood : raise water to an unstable level
+  * Tornado : Kill of a percentage of animals
+  * Wildfire : like Tornado
 
 ===Deliverables===
 As a Client Member of the Natural Environment team, I shall create the following:
 *TerrainManager (Priority 1) (Ozan)*
-  *waterLevel : get;set;
-  *plantCapacity : get;set;
-  *location : get;set;
+  * waterLevel : get;set;
+  * plantCapacity : get;set;
+  * location : get;set;
 *the following extend TerrainManager (Priority 1)*
-  *DesertManager (Dylan)
-  *JungleManager (Dylan)
-  *GrasslandsManager (Ozan)
-  *ArcticManager (Ozan)
+  * DesertManager (Dylan)
+  * JungleManager (Dylan)
+  * GrasslandsManager (Ozan)
+  * ArcticManager (Ozan)
 *EventManager (Priority 1) (Dylan)*
-  *activate(), end()
-  *isActive()
-  *location get;set;
-  *damageRate get;set;
+  * activate(), end()
+  * isActive()
+  * location get;set;
+  * damageRate get;set;
 *the following extend EventManager (Priority 2)*
-  *animal DiseaseManager (Ozan)
-  *plant DiseaseManager (Ozan)
-  *terrainDiseaseManager (Ozan)
-  *droughtManager (Dylan)
-  *floodManager (Dylan)
-  *tornadoManager (Dylan)
-  *wildfireManager (Dylan)
+  * animal DiseaseManager (Ozan)
+  * plant DiseaseManager (Ozan)
+  * terrainDiseaseManager (Ozan)
+  * droughtManager (Dylan)
+  * floodManager (Dylan)
+  * tornadoManager (Dylan)
+  * wildfireManager (Dylan)
 *SeasonManager (priority 2) (Dylan)*
-  *will determine season based on the in game month and make the changes to the environment
+  * will determine season based on the in game month and make the changes to the environment
 
 ===Milestones===
 by 04/14 : TerrainManager, SeasonManager
