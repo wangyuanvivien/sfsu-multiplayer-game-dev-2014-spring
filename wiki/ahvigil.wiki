@@ -1,0 +1,57 @@
+#summary One-Visualization (server requirements).
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+Requirement Specification and Milestone
+(Server/Data Visualization)
+by Arthur Vigil
+= Requirements =
+Provide data retrieval services to the client team for use in visualization:
+ * data about the current game world 
+ * game world history
+Communicate data storage needs to database team
+ * Game state snapshots at fixed intervals
+= Component Design =
+ * GameDataComponent
+  * Component to represent the data we are visualizing as it moves from database through server to client
+  * May include fields for:
+  * data type (graph coordinates, score, etc)
+  * data (actual data to be visualized)
+  * game time- when is this game data relevant
+  * Equivelant to “args” classes in protocol code
+ * GameStateObserver
+  * Makes variables in the current gameplay environment visible to the client side
+  * Methods to retrieve GameData objects for current moment
+  * GameData getTileData(Tile T): Retrieve information for specific tile (biomass, owner, etc)
+  * int getEcosystemScore(Player p): Get score of specified players ecosystem
+  * some overloaded to allow game data from previous game states to be retrieved
+  * GameData getEcosystemScore(Player p, int time): Get score of specified players ecosystem at specified time
+  * Provides interface to data retrieval that might not be directly relevant to current gameplay mechanics but might give player deeper insight into game progress
+= Deliverables =
+ * 3/20/14: Configure svn access to existing codebase and begin investigating approaches for data organization. Ask:
+  * What data needs to be represented?
+  * How much should be done client side (as much as possible!)
+  * data privacy- is all data public and viewable by any player? Are all streams of data directed through the same channels?
+  * How to maximize data presentation without overwhelming user and creating unrealistic bandwidth/compute requirements
+ * 4/3/14: Implement game state observer class with functional DB access methods and utilities for easily providing database results to client. Test with simple visualization examples
+  * Should be able to pick a game statistic and plot over time
+  * Gameplay and non-gameplay statistics possible: biomass over time, environment score, number of online players, battle statistics
+ * 4/10/14: Finalize data retrieval methods
+  * Integrate data models produced by DB team into server side visualization framework
+  * Establish data models being used for visualization: how frequently game data is polled, etc.
+ * Late April
+  * Implement caching of data queries and responses to reduce server overhead
+  * Common queries served directly by server without database access required.
+  * Integrate visualizations with core gameplay elements to allow manipulation of data from within visualizations eg
+  # Biomass for “zebra” is declining, getting too low.
+  # Player click “zebra” line in graph and is brought to store allowing purchase of more zebra along with extrapolated zebra biomass after purchase (current biomass + biomass being purchase)
