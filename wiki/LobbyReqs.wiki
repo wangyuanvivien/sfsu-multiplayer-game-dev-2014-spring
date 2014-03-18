@@ -5,3 +5,5 @@
 [ycheng Ye Cheng (Server)]
 
 [LobbyInterfaceReqs Steven T. Ramzel (Interface)]
+
+[ariboldb Ari Boldbaatar (Protocol)]
