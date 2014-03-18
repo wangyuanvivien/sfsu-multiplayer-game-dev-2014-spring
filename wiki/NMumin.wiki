@@ -19,32 +19,36 @@ SeasonDAO()
 NaturalPhenomDAO()
 
 == DB Schema ==
-===using hard coded values===
+using hard coded values
 
-|| *Environments*|| *Plant level* _(%)_ || *Water level* _(%)_ || *Species Diversity* _(%)_ || 
-||Desert     ||     30     ||     15     ||         15       ||
-||Jungle     ||     70     ||      7     ||          6       ||
-||Grasslands ||     80     ||      6     ||          6       ||
-||Artic      ||     15     ||      9     ||          3       ||
-
-
-
-
-|| *Diseases*|| *disease id* || *name* || *description* ||  *infect_chance* _(%)_ || *spread_chance* _(%)_ || *death_rate* _(%)_ || *heal_chance* _(%)_ ||
-|| || 0 ||   plant     ||    Kills plant life gradually     || 30 ||   10 || 0 || 60 ||
-|| || 1 ||   animal ||    Kills animals at rate, or prevents repoduction     || 12 ||   15 || 20 || 60 ||
-|| || 2 ||   fungal ||    makes terrain less productive, reduces biomass    || 20 ||   30 || 0 || 80 ||
+|| *Environments* ||
+|| *environment id* || *environment name* || *description* || *Plant level* _(%)_ || *Water level* _(%)_ || *Species Diversity* _(%)_ || 
+|| 0 || Desert     ||    dry with limited water supply, certain types of plants    ||     30     ||     15     ||         45       ||
+|| 1 ||Jungle     ||    diverse water and plants     ||     70     ||      70     ||          60       ||
+|| 2 ||Grasslands ||    great plant life, not as diverse as jungle     ||     80     ||      60     ||          60       ||
+|| 3 ||Artic      ||    variety of water species, low plant life closer to none    ||     15     ||      9     ||          30       ||
 
 
-|| *Natural Phenom*  _(%)_|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
-||Drought||-20||60|| 5  ||
-||Flood||-60||50|| 3 ||
-||Tornado||-90||60|| 1 ||
-||Wildfire|| -90 ||30|| 3 || 
 
 
-|| *Season*|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Drought chance* _(%)_ || *Wildfire Chance* _(%)_ || *Flood chance* _(%)_ ||  *Duration* _(turns)_ ||
-||Spring||     70     ||     60     ||         5       || 5 || 60 || 10 ||
-||Summer||     60     ||      50     ||          65       || 75 || 40 || 10 ||
-||Winter||     10     ||      60     ||          0       || 0 || 10 || 10 ||
-||Fall||     25     ||      30     ||          2       || 75 || 0 || 10 || 
+|| *Diseases*||
+|| *disease id* || *name* || *description* ||  *infect_chance* _(%)_ || *spread_chance* _(%)_ || *death_rate* _(%)_ || *heal_chance* _(%)_ ||
+||  0 ||   plant     ||    Kills plant life gradually     || 30 ||   10 || 0 || 60 ||
+|| 1 ||   animal ||    Kills animals at rate, or prevents repoduction     || 12 ||   15 || 20 || 60 ||
+|| 2 ||   fungal ||    makes terrain less productive, reduces biomass    || 20 ||   30 || 0 || 80 ||
+
+
+|| *Natural Occurences* ||
+|| *id* || *name* || *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
+|| 0 ||Drought||-20||60|| 5  ||
+|| 1 ||Flood||-60||50|| 3 ||
+|| 2 ||Tornado||-90||60|| 1 ||
+|| 3 ||Wildfire|| -90 ||30|| 3 || 
+
+
+|| *Season*||
+|| *season id* || *season name* || *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Drought chance* _(%)_ || *Wildfire Chance* _(%)_ || *Flood chance* _(%)_ ||  *Duration* _(turns)_ ||
+|| 0 ||Spring||     70     ||     60     ||         5       || 5 || 60 || 10 ||
+|| 1 ||Summer||     60     ||      50     ||          65       || 75 || 40 || 10 ||
+|| 2 ||Winter||     10     ||      60     ||          0       || 0 || 10 || 10 ||
+|| 3 ||Fall||     25     ||      30     ||          2       || 75 || 0 || 10 || 
