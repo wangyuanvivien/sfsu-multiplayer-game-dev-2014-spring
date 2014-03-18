@@ -56,5 +56,5 @@ As a Client Member of the Natural Environment team, I shall create the following
   * will determine season based on the in game month and make the changes to the environment
 
 ===Milestones===
-by 04/14 : TerrainManager, SeasonManager
+by 04/08 : TerrainManager, SeasonManager
 by 04/28 : Subclasses of DisasterManager and TerrainManager
