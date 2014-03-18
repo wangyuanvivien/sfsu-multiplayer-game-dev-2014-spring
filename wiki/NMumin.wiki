@@ -11,12 +11,17 @@ The Database team will store info about each environment, disease, natural pheno
 
 
 DiseaseDAO()
+ * getByDiseaseID()
+
 
 EnvironmentDAO()
+ * getByEnvironmentID()
 
 SeasonDAO()
+ * getBySeasonID()
 
-NaturalPhenomDAO()
+NaturalEventsDAO()
+ * getByEventID()
 
 == DB Schema ==
 using hard coded values
@@ -38,7 +43,7 @@ using hard coded values
 || 2 ||   fungal ||    makes terrain less productive, reduces biomass    || 20 ||   30 || 0 || 80 ||
 
 
-|| *Natural Occurences* ||
+|| *Nature events* ||
 || *id* || *name* || *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
 || 0 ||Drought||-20||60|| 5  ||
 || 1 ||Flood||-60||50|| 3 ||
