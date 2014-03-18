@@ -11,29 +11,29 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 == DB Schema ==
 ===using hard coded values===
 
-|| *Environments*|| *Plant level* || *Water level* || *Species Diversity* ||
-||Desert     ||     30%     ||     15%     ||         15%       ||
-||Jungle     ||     70%     ||      7%     ||          6%       ||
-||Grasslands ||     80%     ||      6%     ||          6%       ||
-||Artic      ||     15%     ||      9%     ||          3%       ||
+|| *Environments*|| *Plant level* || *Water level* || *Species Diversity* || 
+||Desert     ||     30     ||     15     ||         15       ||
+||Jungle     ||     70     ||      7     ||          6       ||
+||Grasslands ||     80     ||      6     ||          6       ||
+||Artic      ||     15     ||      9     ||          3       ||
 
 
 
-|| *Season*|| *Plant growth rate* || *Animal Reproduction Rate* || *Drought chance* || *Wildfire Chance* ||*Flood chance* ||
-||Spring||     70%     ||     60%     ||         5%       || 5% || 60% ||
-||Summer||     60%     ||      50%     ||          65%       || 75% || 40% ||
-||Winter||     10%     ||      60%     ||          0%       || 0% || 10% ||
-||Fall||     25%     ||      30%     ||          2%       || 75% || 0% ||
+|| *Season*|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Drought chance* _(%)_ || *Wildfire Chance* _(%)_ || *Flood chance* _(%)_ ||  *Duration* _(turns)_ ||
+||Spring||     70     ||     60     ||         5       || 5 || 60 || 10 ||
+||Summer||     60     ||      50     ||          65       || 75 || 40 || 10 ||
+||Winter||     10     ||      60     ||          0       || 0 || 10 || 10 ||
+||Fall||     25     ||      30     ||          2       || 75 || 0 || 10 ||
 
 
 
-|| *Diseases*|| *Plant growth rate* || *Animal Reproduction Rate* ||
-||Animal||     70%     ||     60%     ||     
-||Plant||     60%     ||      50%     ||    
+|| *Diseases*|| *Plant growth rate* || *Animal Reproduction Rate* ||  *Duration* _(turns)_ ||
+||Animal||     70     ||     60     ||  ||   
+||Plant||     60     ||      50     ||  ||   
 
 
-|| *Natural Phenom*|| *Plant growth rate* || *Animal Reproduction Rate* ||
-||Drought||-20%||60%||
-||Flood||60%||50%|| 
-||Tornado||10%||60%|| 
-||Wildfire|| 25% ||30%||  
+|| *Natural Phenom*  _(%)_|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
+||Drought||-20||60|| 5  ||
+||Flood||-60||50|| 3 ||
+||Tornado||-90||60|| 1 ||
+||Wildfire|| -90 ||30|| 3 ||  
