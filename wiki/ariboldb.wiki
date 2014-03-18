@@ -1,0 +1,75 @@
+= Game Lobby/Map Protocol Requirements and Specifications =
+== 1. Requirements == 
+*Priority 1*
+  * Players shall be able to register from the Login scene (assuming Game Lobby/Map handles this implementation)
+  * Lobby screen shall display current game world information
+    * Overall environment score
+    * Biomass
+    * Active players
+  * Game lobby shall display Player’s personal ecosystem information
+    * Number of tiles
+    * Environment score
+    * Biomass points
+    * Species in ecosystem tiles
+  * Players shall be able to engage battle
+
+*Priority 2*
+ * Players shall be able to interact using chat/lobby messaging
+
+== 2. Object implementations ==
+These are TBD. Rough outlines for responses and requests between client/server. They will most likely communicate with other component protocols.
+
+  * *RequestRegistration*
+    * Player fills out registration information and sends through client via request code
+  * *ResponseRegistration*
+    * Server stores new player information in database and responds with error or OK code
+
+  * *RequestWorldData*
+    * Client requests current world information after player logs in
+  * *ResponseWorldData*
+    * Collect world information and send to client
+    * Will have multiple arguments (data fields)
+    * Overall world biomass
+    * Active number of players
+    * Et cetera...
+
+  * *RequestTile*
+    * Player clicks on a tile, client sends request for info on that tile
+  * *ResponseTile*
+    * Server responds with tile information, may be stored client side and synced as needed with server database: species on tile, biomass of tile, owner of tile 
+
+  * *RequestEcosystem*
+    * Player looks up their or other players’ profile, client sends request to server
+  * *ResponseEcosystem*
+    * Server responds with specified player’s ecosystem information: how many tiles in ecosystem, total number of species in ecosystem (fragmented and continuous)
+
+  * *RequestBattle*
+    * Player engages in battle with another player
+  * *ResponseBattle*
+    * Battle system sets up battle and responds with necessary response for both players
+
+  * *RequestMessage*
+    * Player types a message in chat and clicks send / Player logs in
+  * *ResponseMessage*
+    * Game displays message(s) in chat
+
+  * *RequestTutorial*
+    * If a player has just registered, allow for optional tutorial scene or if player clicks on a tutorial button
+  * *ResponseTutorial*
+    * Send player’s client view to Tutorial mode, maybe store player’s progress to database (persistent level carryover from tutorial)
+
+  * *RequestSpecies*
+    * Player requests species information
+  * *ResponseSpecies*
+    * Respond with corresponding information for given species
+
+== 3. Milestones ==
+
+*By April 4th:*
+  * Implement registration protocol
+  * Talk with other protocol developers to work out issues, what information needs to be passed between each component
+  * Implement protocol for switching to and from tutorial
+*Mid/End of April:*
+  * Tile protocol
+  * Battle protocol
+  * Personal Ecosystem
