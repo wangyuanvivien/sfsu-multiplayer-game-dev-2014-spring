@@ -1,0 +1,43 @@
+#George Lee: Tutorial/Client Requirements Spec.
+
+= Requirement Specification and Milestones =
+= (Tutorial/Client Team) =
+
+*George Lee*
+
+*03/18/2014*
+
+*CSc 631*
+
+== 1. Requirements ==
+
+  * The tutorial mode shall consist of 2 different levels/tutorials: An ecosystem tutorial mode and a battle tutorial mode.
+    * The client GUI/user interaction for the tutorial will depend on that of the main game.
+  * The client interacts with the interface and server in order to display the completion status of the tutorial mode. 
+  * The client connects to the server in order to set and retrieve the completion status of the tutorial mode for an individual player:
+    * The client sends a request to the server in order to retrieve the completion status of the tutorial mode when the user logins.
+    * The client sends a request to the server once the tutorial is completed in order to update the completion status of the tutorial mode for an individual player.
+
+
+== 2. Component Design / Classes ==
+
+  * *TimeLine* - Keeps track of the player’s progress through the tutorial and determines which tutorial step the player is currently on. Also displays the current tutorial objective and waits for the player to complete it before advancing to the next step. 
+
+  * *TutorialStep* - Parent class to individual tutorial step implementations. Each tutorial step contains a tutorial prompt which is to be displayed to the player. An individual tutorial step is called by TimeLine and returns once the individual tutorial step is completed.
+
+  * *TutorialPrompt* - Holds a list of tutorial prompts (objectives that the player must complete) represented as text.
+
+  * *EcosystemTutorialGameScene* - The scene that contains the ecosystem tutorial level.
+
+  * *BattleTutorialGameScene* - The scene that contains the battle tutorial level. 
+
+  * *DummyPlayer* - Artificial opponent for the player with pre-determined set of responses to the players moves during a battle.
+
+  * *Request and Response protocols/classes* to set and retrieve the tutorial completion statuses for an individual player (see Tutorial Server component classes).
+
+
+== 3. Milestones ==
+
+  * 03/21/14: Develop a test environment for the tutorial prompts.
+  * 03/28/14: Complete storyboard and use cases for the battle tutorial.
+  * 04/04/14: Implement tutorial prompts.
