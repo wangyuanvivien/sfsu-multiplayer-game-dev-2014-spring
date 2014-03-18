@@ -1,8 +1,8 @@
 #summary One-sentence summary of this page.
 Keith Hendershot – Database Team – Battle Team
-= Introduction =
 
-*Requirements*
+
+= *Requirements* =
 
 1.   The database shall store all information about the players who are    
      battling each other.
@@ -10,21 +10,18 @@ Keith Hendershot – Database Team – Battle Team
      ecosystems.
 3.   The information contained on the database shall be used to determine each player’s score.
  
-*Component Design*
+= *Component Design* =
 1.   One database per server
+
 2.   One table per battle
 
 
-*Deliverables (Based on demand from other components)*
+= *Deliverables (Based on demand from other components)* =
 1.   A database containing all the necessary information.
+
 2.   Maintenance of the database.
-3.   Appropriate access schema available upon request from other    
-     component teams. 
 
-= Details =
+3.   Appropriate access schema available upon request from other component teams. 
 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
