@@ -1,0 +1,97 @@
+==Kirill Kovalevsky==
+==Lobby and Hexagon Tile World Team==
+===Client Team===
+
+====1.Requirements====
+
+Login & Lobby
+ * Interact with Interface to display login window for player
+ * Interact with Server to check player credentials and load player profile and information into client.
+ * (Interact with Interface to display a map list/lobby for player to pick map)?
+ * Receive Map information from Server (Save some information locally to save on networking)
+ * Display map of tiles 
+Map
+ * Display information about tiles received from Server
+ * Interact with Interface with window or tooltip to display detailed information about specific tile, or all regions owns by specific player.
+ * Allow of different zoom view of map (either a variable scroll or in predefined increments)
+Tile/Area Owned
+ * Allow for view of one specific tile or entire area owned by player; interact with Server to receive player economic information.
+ * Display web of tiles and relations between players owned tiles.
+ * Animate and show ecological changes received from Server simulation
+ * Display economic overview through Interface
+Personal Ecosystem Management
+ * Interact with Interface for a window that allows for purchase of resources
+ * Interact with Server to send and receive purchase information
+ * Interact with Server to receive simulation information of growth of ecology based on information sent (will resend information with relevant changes by player for new results)
+ * Display changes in personal ecosystem in both animation and Interface
+ * Allow player to manage both specific tile and total region owned. (depending on system)
+ * Animate growth and change on cycle (per turn)
+Battle Initiation
+ * Allow player to select tile to attack
+ * Interact with Interface for attack window 
+ * Interact with Server for tile information about distance and availability of time
+ * Place player in queue and send information to Battle Component
+ * Interact with Server to update and send battle results and store accordingly, and update displayed ecosystem and owned areas.
+ * Interact with Interface to display battle results
+
+
+===2.Objects===
+PurchaseManager
+ * Will manage player’s interactions with the purchase of new species and resources
+ * Will communicate with Server to update and store information
+ * Will update overall player species displayed
+
+BattleManager
+ * Will manage battle queue and initiate battle
+ * Will receive information from battle and update Server and Client information as well as player information and ecosystem.
+
+TileAnimations
+ * Will show animations of idle animal movement on a tile
+ * Disasters on overall map
+ * Will show (if added) species interaction received from Game Logic component
+ * Display any other content based changes (like increase or decrease of species)
+
+Map
+ * Will hold all tiles and communicate with server to receive the map specifics, layout, ownership, and all other information to store on the Server and display on the Client.
+
+Tile
+ * Will be object that stores specific tile information, for each tile on the map on the Server.
+ * Will have biome, maximum biomass, animals, etc
+ * Will get information from database that stores all the tiles.
+
+TileRenderer
+ * Will receive information from server to display the pattern of different tiles which is the map.
+ * Types of tiles received from other component then placed by Server randomly or semi-randomly.
+ * Will clump up player owned tiles to display color and ownership
+ * Will show different colors based on player and biome
+
+Lobby
+ * May have intermediate step between login and map, will have a list of available maps that a player can choose to play on.
+ * Including global chat?
+
+Login
+ * Will show player with the initial login screen when they start the game
+ * Will check credentials then load player profile when login is successful
+ * Then will either show a lobby? or show player the gamemap
+ * Give player place on map afterwards
+
+Player
+ * Will communicate with Server to receive the player profile and display their tiles and assets
+ * Will contain player locations and which tiles/spots are owned by which player as well as overall resources and other general values that are received from Game Logic.
+
+===3.Milestones===
+4/1
+ * Basic Login/Lobby
+ * Basic Map tile system and map generation
+ * Basic Player Information System
+ * Tile view and interaction
+ * Basic player tile management
+4/8
+ * Battle queue and interaction
+ * Purchase and ecosystem management
+ * Tile specific biome and external forces listeners
+4/29
+ * Refined map
+ * Refined login
+ * Refined player information and data
+ * Tile connectivity and webs
