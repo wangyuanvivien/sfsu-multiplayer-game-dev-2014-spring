@@ -1,0 +1,61 @@
+Scott Hongsdusit - Client Team - Battle Team
+
+==1. Requirements==
+
+Client requirements:
+  * The client shall be able to connect to server to battle players.
+  * The client shall be able to send players' battle ecosystem stats to the server.
+    * The stats include players' biomasses, biomass points, etc. 
+  *	The client shall be able to send battle commands for the server to process.
+  *	The client shall be able to receive battle information from the server.
+  *	The client shall be able to declare battle on another tile adjacent to their own tile
+  *	The client shall be able to build a battle ecosystem.
+     *	Client shall be able to transfer species to the battle ecosystem in compliance with vegetation capacity
+  *	The client shall be able to provide a default battle ecosystem to help player
+  *	The client shall be able to update tile control from the results of the battle sent from the server
+
+==2. Component Design==
+
+Client Team:
+
+Battle
+  *	Main game battle script
+  *	Interacts with Unity GUI
+  *	User input driven events
+  *	Keeps track of player stats and information
+  *	Sends appropriate requests and responses
+
+Game Loop
+  *	Main game loop
+  *	keep track of species and battle stats
+
+Shop
+  *	Lets players buy items to use in battle (e.g. natural disasters)
+  *	Keeps track of items
+
+Battle Score
+  *	Keeps track of battle scores
+
+World
+  *	Keeps track of species spawn and count for battle
+Game State
+  *	Keeps track of turns of player during battle
+
+==3. Deliverables==
+
+4 week milestones:
+  *	Some of Game Loop by 4/1
+  *	Some of Game State by 4/3
+  *	Some of Battle Script by 4/8
+  *	Some of Battle Score by 4/10
+Next 4 weeks:
+  *	Remaining of Game Loop by 4/15
+  *	Remaining of Game State by 4/17
+  *	Remaining of Battle Script by 4/22
+  *	Remaining of Battle Score by 4/24
+  *	Shop by 4/29
+
+
+API from other component teams needed to complete the project.
+
+Interface needed to complete GUI and Protocols needed to complete Request/Response classes.
