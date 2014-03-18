@@ -27,9 +27,9 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 
 
 
-|| *Diseases*|| *Plant growth rate* || *Animal Reproduction Rate* ||  *Duration* _(turns)_ ||
-||Animal||     70     ||     60     ||  ||   
-||Plant||     60     ||      50     ||  ||   
+|| *Diseases*|| *Plant growth rate*  _(%)_ || *Animal Reproduction Rate* _(%)_  ||  *Duration* _(turns)_ ||
+||Animal||     70     ||     60     || 3 - 5 ||   
+||Plant||     60     ||      50     || 3 - 5 ||   
 
 
 || *Natural Phenom*  _(%)_|| *Plant growth rate* _(%)_ || *Animal Reproduction Rate* _(%)_ || *Duration* _(turns)_ ||
