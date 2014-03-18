@@ -1,0 +1,27 @@
+=Tutorial team Protocol Requirements Documentation=
+
+==Protocol requirements: ==
+-Shall be able to transfer necessary data between client and server. To be able to do that, protocol should have both request and respond class for each or all necessary data at both client and server side.
+==Passible data types: ==
+  *  Userid
+  *  Level
+  *  Money
+  *  Scores
+  *  Steps number
+  *  Species ID
+==Protocol methods of the visual data==
+  *  RequestId()/RespondId()
+  *  RequestLevel()/RespondLevel()
+  *  RequestMoney()/RespondMoney()
+  *  RequestScore()/RespondScore()
+  *  RequestSteps()/RespondSteps()
+  *  RequestSpecies_Id()/RespondSpecies_Id()
+==TimeLine==
+  *  Milestone0:
+      *  3/16 Requirements Documentation
+  *  Milestone1:
+      *  3/24 Prototype of request and respond class for the client side
+  *  Milestone2:
+      *  3/30 Prototype for the server side
+  *  milestone3:
+      *  4/4 Modify code, and necessary functions.
