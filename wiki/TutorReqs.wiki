@@ -2,7 +2,7 @@
 
 ==Members (Functionality)==
 
-[TutorialServerRequirementsMilestones Kenneth Robertson(Server)]: TutorialServerRequirementsMilestones
+[TutorialServerRequirementsMilestones Kenneth Robertson(Server)]:
      Document Download: 
            https://ilearn.sfsu.edu/ay1314/mod/forum/discuss.php?d=122122
 
