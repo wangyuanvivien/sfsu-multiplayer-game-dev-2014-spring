@@ -1,4 +1,4 @@
-#George Lee: Tutorial/Client Requirements Spec.
+#summary George Lee: Tutorial/Client Requirements Spec.
 
 = Requirement Specification and Milestones =
 = (Tutorial/Client Team) =
