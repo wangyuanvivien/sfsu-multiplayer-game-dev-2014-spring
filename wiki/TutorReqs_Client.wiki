@@ -23,15 +23,15 @@
 
   * *TimeLine* - Keeps track of the player’s progress through the tutorial and determines which tutorial step the player is currently on. Also displays the current tutorial objective and waits for the player to complete it before advancing to the next step. 
 
-  * *TutorialStep * - Parent class to individual tutorial step implementations. Each tutorial step contains a tutorial prompt which is to be displayed to the player. An individual tutorial step is called by TimeLine and returns once the individual tutorial step is completed.
+  * *!TutorialStep* - Parent class to individual tutorial step implementations. Each tutorial step contains a tutorial prompt which is to be displayed to the player. An individual tutorial step is called by TimeLine and returns once the individual tutorial step is completed.
 
-  * *TutorialPrompt* - Holds a list of tutorial prompts (objectives that the player must complete) represented as text.
+  * *!TutorialPrompt* - Holds a list of tutorial prompts (objectives that the player must complete) represented as text.
 
-  * *EcosystemTutorialGameScene* - The scene that contains the ecosystem tutorial level.
+  * *!EcosystemTutorialGameScene* - The scene that contains the ecosystem tutorial level.
 
-  * *BattleTutorialGameScene* - The scene that contains the battle tutorial level. 
+  * *!BattleTutorialGameScene* - The scene that contains the battle tutorial level. 
 
-  * *DummyPlayer* - Artificial opponent for the player with pre-determined set of responses to the players moves during a battle.
+  * *!DummyPlayer* - Artificial opponent for the player with pre-determined set of responses to the players moves during a battle.
 
   * *Request and Response protocols/classes* to set and retrieve the tutorial completion statuses for an individual player (see Tutorial Server component classes).
 
