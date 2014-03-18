@@ -1,3 +1,4 @@
+#labels LobbyMapGroup,RequirementsDocumentation
 ==Kirill Kovalevsky==
 ==Lobby and Hexagon Tile World Team==
 ===Client Team===
