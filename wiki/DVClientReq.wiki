@@ -1,0 +1,47 @@
+==Requirements==
+  * Design and implement charts and graphs to display data about the ecosystem
+  * Have buttons to allow the user to choose what information to display
+  * Draw graphs using data obtained from database
+  * Create a graph for predator/prey interaction
+  * Grab data from the server for each graph
+
+==Implementation==
+Objects needed:
+  * PlayerData: 
+    * Displays the current biomass/species, tiles owned, environment score
+  * TopPlayerData
+    * Current biomass/species, tiles owned, environment score
+  * Graph: 
+    * Parent of all graphs
+    * Object that draws a graph depending on the data given to it
+    * Biomass Graph: Biomass over time
+    * Predator/Prey interactions Graph: Charts relationship between two species and their population’s changes over time
+    * Species Quantities and Events Graph: Events that affect species such as births, deaths, poached
+    * Battle Graph: Shows the differences between you and your opponents battle environments
+  * TileData:
+    * onMouseHoverEvent()
+      * When a player hovers over a tile, a box will display which includes all the information about the tile selected.
+    * Create an OnGUI() event that makes calls to methods and then displays the data
+    * Gather the Vegetation Capacity and display it
+    * Check if the tile selected is owned by the player or not and display the information associated with ownership
+  * BattleData
+    * historyOfBattle()
+      * Retrieves and display the historical list of turn-statistics
+    * Create buttons and make appropriate calls in OnGUI()
+  * Update()
+    * Update current statistics of the battle that are permanently displayed (turn, battle ecosystem score, biomass, vegetation)
+  * Graph()
+    * Obtains and presents graph and data
+
+==Milestones==
+
+M1(3/21): Connect to the database and retrieve relevant data
+
+M2(4/4): Draw a graph using either Unity3D or GoogleCharts
+
+M3(4/11): Create GUI interface to toggle graph on/off
+
+M4(4/21): Work with interface team to create a look and feel consistent with the rest of the game
+
+M5(5/5): Integrate data visualization into battle scene
+
