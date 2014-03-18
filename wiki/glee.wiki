@@ -30,7 +30,6 @@
   * *!EcosystemTutorialGameScene* - The scene that contains the ecosystem tutorial level.
 
   * *!BattleTutorialGameScene* - The scene that contains the battle tutorial level. 
-
     * *!DummyPlayer* - Artificial opponent for the player with pre-determined set of responses to the players moves during a battle.
 
   * *Request and Response protocols/classes* to set and retrieve the tutorial completion statuses for an individual player (see Tutorial Server component classes).
