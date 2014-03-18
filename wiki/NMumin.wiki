@@ -1,0 +1,13 @@
+#summary Naimah Mumin - Natural Environment Team: DB.
+
+= Introduction =
+
+The Natural Environment Team is in charge of things such as disease, disaster, climate change and season. As a the database member 
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
