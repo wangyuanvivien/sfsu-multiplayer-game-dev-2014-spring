@@ -1,20 +1,7 @@
-#summary One-Visualization (server requirements).
-
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
 Requirement Specification and Milestone
 (Server/Data Visualization)
 by Arthur Vigil
+
 = Requirements =
 Provide data retrieval services to the client team for use in visualization:
  * data about the current game world 
