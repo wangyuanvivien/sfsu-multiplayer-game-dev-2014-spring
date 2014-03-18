@@ -19,7 +19,7 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 
 
 
-|| *Season*|| *Plant growth rate* || *Animal Reproduction Rate* || *Drought chance* || *Wildfire Chance* ||*Flood chance*
+|| *Season*|| *Plant growth rate* || *Animal Reproduction Rate* || *Drought chance* || *Wildfire Chance* ||*Flood chance* ||
 ||Spring||     70%     ||     60%     ||         5%       || 5% || 60% ||
 ||Summer||     60%     ||      50%     ||          65%       || 75% || 40% ||
 ||Winter||     10%     ||      60%     ||          0%       || 0% || 10% ||
@@ -32,8 +32,8 @@ The Natural Environment Team is in charge of things such as disease, disaster, c
 ||Plant||     60%     ||      50%     ||    
 
 
-|| *Natural Phenom*|| *Plant growth rate* || *Animal Reproduction Rate* || *Drought chance* || *Wildfire Chance* ||
-||Drought||     70%     ||60%  ||5% || 5% ||
-||Flood||     60%     ||      50%|| 65%|| 75% ||
-||Tornado||     10%     ||      60% ||  0%   || 0% ||
-||Wildfire||     25%     ||      30%||   2%|| 75% || 
+|| *Natural Phenom*|| *Plant growth rate* || *Animal Reproduction Rate* ||
+||Drought||-20%||60%||
+||Flood||60%||50%|| 
+||Tornado||10%||60%|| 
+||Wildfire|| 25% ||30%||  
