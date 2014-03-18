@@ -2,13 +2,13 @@
 (Server/Data Visualization)
 by Arthur Vigil
 
-= Requirements =
+== Requirements ==
 Provide data retrieval services to the client team for use in visualization:
  * data about the current game world 
  * game world history
 Communicate data storage needs to database team
  * Game state snapshots at fixed intervals
-= Component Design =
+== Component Design ==
  * GameDataComponent
   * Component to represent the data we are visualizing as it moves from database through server to client
   * May include fields for:
@@ -24,7 +24,7 @@ Communicate data storage needs to database team
   * some overloaded to allow game data from previous game states to be retrieved
   * GameData getEcosystemScore(Player p, int time): Get score of specified players ecosystem at specified time
   * Provides interface to data retrieval that might not be directly relevant to current gameplay mechanics but might give player deeper insight into game progress
-= Deliverables =
+== Deliverables ==
  * 3/20/14: Configure svn access to existing codebase and begin investigating approaches for data organization. Ask:
   * What data needs to be represented?
   * How much should be done client side (as much as possible!)
