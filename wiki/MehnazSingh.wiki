@@ -1,0 +1,103 @@
+Mehnaz Singh-Protocol Team
+Requirement Doc
+
+As part of the Protocol team, we will implement a new Protocol which client will use to communicate with the Server.
+
+Client/Server Requirements
+
+1.	The new protocol will handle multiple requests from clients.
+
+2.	The client while engaging with the enemy will ask the server about the details about the enemy. (How the client will send enemy (opposite player) information?)
+
+3.	The protocol will persist the information to the DB once the client sends info to save. E.g. after capturing the other player’s vegetation, and thus increasing its own money.
+
+4.	Once the game is paused, the client needs to send all the session info to Server so that once played again the game restores from the previous saved state.
+
+5.	Will need to figure out what all client needs to send to Server 
+
+Server Components
+
+1.	Login Class
+LoginRequest:GameRequest
+-userid
+-pwd
++void LoginRequest(userid,pwd)
++void verifyUser
+
+RequestLogin  class will be used to cater to Login process. It will verify the user against the records stored in database and return true if the user exists and if password is matching.
+
+2.	Register Class
+Register class is used to register the first time player. The client will pass the information such as userid,password,email,birthday. It will have one method Register to persist the record in the database.
+
+Register: GameRequest
+-userid
+-pwd
+-email
+-Birthday
++void Register(userid,pwd)
+
+3.	Abstract Tile class
+Tile
+-owner
+-vegetationCapacity
++Tile(owner)
++getVegetationCapacity()
++getOwner()
+
+Each player class has an instance of Tile Class in it. Tile Class is an Abstract class from which various types of other Tile classes derive such as Desert Tile, Plains Tile.
+
+
+DesertTile: Tile
++getVegetationCapacity()
+		PlainTile: Tile
++getVegetationCapacity()
+
+
+4.	Abstract Species Class
+Species
+-bioMassCapacity
++getBioMassCapacaity()
+
+
+
+Lion: Species
++getBioMassCapacaity()
+		Tree: Species
++getBioMassCapacaity()
+
+
+5.	Ecosystem class
+Each player will have his own Ecosystem instance. Each Ecosystem class will contain the number of Tiles it has, number of Species it has etc
+Ecosystem
+-Tile
+-Species
++getEcosystem()
+
+
+6.	Player class
+Each player will be represented by Player class. Each instance of player class will also hold an instance of Tile class
+Player
+-Ecosystem
+-playerID
+-score
++putTile(Tile)
++getTiles()
++getID()
++getScore()
++getSpecies()
++getEcosystem()
+
+3. Deliverables
+4 week milestones:
+
+Game Loop by 4/1
+Game State by 4/3
+Battle Script by 4/8
+Battle Score by 4/10
+Next 4 weeks:
+Rest of Game Loop by 4/15
+Rest of Game State by 4/17
+Rest of Battle Script by 4/22
+Rest of Battle Score by 4/24
+
+Interface needed to complete GUI and Protocols needed to complete Request/Response classes.
