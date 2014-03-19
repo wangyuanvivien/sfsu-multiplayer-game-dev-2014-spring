@@ -79,8 +79,10 @@ Milestones
 
 Priority 1 
 
-March 31, 2014: Finish registration, login, update general information about World 			of Balance statistics, tiles, and game map.
+March 31, 2014: Finish registration, login, update general information about World of Balance statistics, tiles, and game map.
 
 April 30, 2014: Finish chat room, initiating battle with other players.
 
 Last day of class: Rest of requirements fulfilled for a full working game!
+
+[https://code.google.com/p/sfsu-multiplayer-game-dev-2014-spring/wiki/LobbyReqs]
