@@ -11,3 +11,5 @@
 [ClientReqs1 Kirill Kovalevsky (Client)]
 
 [KVelasco Kevin Velasco (Database)]
+
+[ClientLobbyMap Robert Moon (Client)]
