@@ -117,7 +117,7 @@ Seasons include: Spring, Summer, Fall, Winter
 *Natural Environment*
   * Create Season objects and methods to acquire modifiers
 
-=== April 23: ===
+=== April 23rd: ===
 
 *Content*
   * Run simulations
