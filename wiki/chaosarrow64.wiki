@@ -9,7 +9,7 @@ Kason Soohoo
 
 *Content Technical Team*
 
-Revised: 17 March 2014
+Revised: 28 March 2014
 
 == 1.  High-Level Tasks ==
 
@@ -91,7 +91,7 @@ Seasons include: Spring, Summer, Fall, Winter
   * Finalize list of natural environment elements to include in high-priority tasks
   * Define objects required for each element
 
-=== April 3rd: ===
+=== April 2nd: ===
 
 *Content*
   * Learn DB
@@ -100,7 +100,7 @@ Seasons include: Spring, Summer, Fall, Winter
 *Natural Environment*
   * Create Terrain objects and methods to acquire modifiers
 
-=== April 10th: ===
+=== April 9th: ===
 
 *Content*
   * SimJobs DB; SimJob.SaveSimeJob( ); SimJob.LoadSimJobs( )
@@ -108,7 +108,7 @@ Seasons include: Spring, Summer, Fall, Winter
 *Natural Environment*
   * Create NaturalEvent objects and methods to acquire modifiers
 
-=== April 17th: ===
+=== April 16th: ===
 
 *Content*
   * Run simulations
@@ -117,7 +117,7 @@ Seasons include: Spring, Summer, Fall, Winter
 *Natural Environment*
   * Create Season objects and methods to acquire modifiers
 
-=== April 24th – May 15th: ===
+=== April 23: ===
 
 *Content*
   * Run simulations
@@ -125,5 +125,12 @@ Seasons include: Spring, Summer, Fall, Winter
   * Find values for effects of environment and natural events
 
 *Natural Environment*
-  * Create additional NaturalEvents
-  * Create player controlled events
+  * 
+
+=== April 30th: ===
+
+*Content*
+  * 
+
+*Natural Environment*
+  * 
