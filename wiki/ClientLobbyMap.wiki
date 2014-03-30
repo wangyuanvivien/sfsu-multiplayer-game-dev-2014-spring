@@ -79,6 +79,8 @@ Milestones
 
 Priority 1 
 
+April 8: Finish hexagonal map.  Change World Scene with all features such as Species Viewer, Shop, chat, and menu to TestMap scene.  All features fully functional.  Substantial work done on multiplayer component to game. 
+
 March 31, 2014: Finish registration, login, update general information about World of Balance statistics, tiles, and game map.
 
 April 30, 2014: Finish chat room, initiating battle with other players.
