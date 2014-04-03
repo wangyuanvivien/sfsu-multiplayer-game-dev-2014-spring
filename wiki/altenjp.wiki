@@ -9,12 +9,15 @@ Requirement Specifications and Milestones
               ii.	Display available points and items to purchase
              	
       b.	Battle GUI
-               i.       2 panes
+               i.       2 panes (1 for each player)
               ii.       Display battle options
+     c.        Time lapse
+               i.       Animate a sun traveling from left to right after a turn is completed to show time passing
 3.	Deliverables
       a.	4 week milestones
-               i.	Display some of GUI by 4/9
+               i.	Display some of shop GUI by 4/9
       b.	Next 4 weeks
-               i.	Display rest of GUI 
+               i.	Display some of battle GUI by 4/23
+              ii.       Display visual time lapse by 4/30
  
  
