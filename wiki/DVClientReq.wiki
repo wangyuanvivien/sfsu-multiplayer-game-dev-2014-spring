@@ -35,13 +35,10 @@ Objects needed:
 
 ==Milestones==
 
-M1(3/21): Connect to the database and retrieve relevant data
+M1(4/8): Display score, top score, environment point. Remove hard coded code and get actual data from the server to display on the screen.
 
-M2(4/4): Draw a graph using either Unity3D or GoogleCharts
+M2(4/15): Include tabs into the screen. When a user click on the tabs, it will display graphs associated with the tab.
 
-M3(4/11): Create GUI interface to toggle graph on/off
+M3(4/28): Display battle data and title data.
 
-M4(4/21): Work with interface team to create a look and feel consistent with the rest of the game
-
-M5(5/5): Integrate data visualization into battle scene
-
+M4(5/5): Integrate data visualization into battle scene
