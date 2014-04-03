@@ -19,9 +19,13 @@ Game Project: World of Balance
 
 The Tutorial Interface shall contains objects such as "Text", "Button" and "TextBox"
 
-- "Text" contains "Next", "Back", "Repeat", and "Finish"
+- "Button" contains "Next", "Back", "Repeat", and "Finish"
 - all "Button" and "Text" objects shall be within "TextBox"
 
 "Text": display interactive messages where user read
 "Button": object where user can press
 "TextBox": It pops on the game screen
+
+Deliverable
+Milestones:
+- present how tutorial interface is working.
