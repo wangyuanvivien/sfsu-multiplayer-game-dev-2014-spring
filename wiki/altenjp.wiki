@@ -1,7 +1,8 @@
 Requirement Specifications and Milestones
 
 1.	Requirements
-      a.	The game shall offer a GUI for a battle setup (shop)
+      a.	The game shall offer a GUI for a battle setup (shop) 
+
       b.	The game shall offer a GUI for the battle sequence
 2.	Component Design
       a.	Shop GUI
