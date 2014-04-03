@@ -1,24 +1,20 @@
 Requirement Specifications and Milestones
 
 1.	Requirements
-      a.	The game shall offer a GUI for a battle sequence 
-      b.	The game shall offer backgrounds for different weather scenarios
+      a.	The game shall offer a GUI for a battle setup (shop)
+      b.	The game shall offer a GUI for the battle sequence
 2.	Component Design
-      a.	GUI’s to provide
-               i.	Display player stats
-              ii.	Display battle options
-             iii.	Display score
-      b.	Background
-               i.	Specific backgrounds for each weather condition
-                      1.	Fire
-                      2.	Snow
-                      3.	Flood
-                      4.	Hurricane
+      a.	Shop GUI
+               i.	Window pane 
+              ii.	Display available points and items to purchase
+             	
+      b.	Battle GUI
+               i.       2 panes
+              ii.       Display battle options
 3.	Deliverables
       a.	4 week milestones
-               i.	Display some of GUI by 4/3
-              ii.	Have some backgrounds done by 4/15
+               i.	Display some of GUI by 4/9
       b.	Next 4 weeks
-               i.	Display rest of GUI
-              ii.	Display rest of backgrounds 
+               i.	Display rest of GUI 
+ 
  
