@@ -1,5 +1,5 @@
 #labels Tutorial,Interface
-CSC 631: Tutorial Interface's Outline
+CSC 631: Tutorial Interface's Outline for Milestone_1
 Tutorial Team
 Jung Hwan Kim: Interface	
 March 11, 2014
@@ -16,3 +16,12 @@ Game Project: World of Balance
 	- Multiplayer's tutorial mode has the user  and a non-playable "dummy" player. 
 	- This mode provides the user with information about how to attack other players. 
 	- The "dummy" player does nothing and is only used to show the user how to engage in 	battle. 
+
+The Tutorial Interface shall contains objects such as "Text", "Button" and "TextBox"
+
+- "Text" contains "Next", "Back", "Repeat", and "Finish"
+- all "Button" and "Text" objects shall be within "TextBox"
+
+"Text": display interactive messages where user read
+"Button": object where user can press
+"TextBox": It pops on the game screen
