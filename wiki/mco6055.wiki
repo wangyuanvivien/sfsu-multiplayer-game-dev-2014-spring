@@ -120,10 +120,8 @@ Marco Chin
 	
 
 =2. Objects(subject to change)=
-*EnvironmentController*
-	Do we need this? 
 
-*DisasterController*
+*NatureEventsController*
 
 	 public static String generateDisaster(int i)
 
@@ -143,23 +141,13 @@ Marco Chin
 
 *DiseasesController*
 
-	 public static String generateDisease(int i)
-
   Diseases are priority 3, not yet implemented
   Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
   Database and Protocal members please use these classes to communicate between
   database and client.
 
-*EventsController*
-
-	 public static String generateEvent(int i)
-
-  Takes in a number and spits out an event(String). When client recieves the season
-  string "Rain", Unity should generate the Rain accordingly. Events are the
-  opposite of disasters and brings good benefits. This is not to be confused
-  events in the core package.
-  Database and Protocal members please use these classes to communicate between
-  database and client.
+*EnvironmentController*
+	Do we need this? 
 
 =3. Milestones=
 By 4/8 Finish 	EnvironmentController and DisasterController
