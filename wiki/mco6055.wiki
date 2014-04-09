@@ -6,55 +6,6 @@ Marco Chin
 =Natural Environment requirements:=
 	The game shall implement the use of types of environments, disasters, season changes, and diseases, listed in ascending priority.
 
-=Priorities= 
-=1 - Must have, don’t launch without=
-
-*1.	Types of Environments*
-                a.	Desert
-
-                b.	Jungle
-
-                c.	Grasslands
-
-                d.	Arctic
-
-*2.      Disasters*
-                a.	Fire
-
-                b.	Flood
-
-=2 - Good to have=
-*1.	Seasons*
-
-        a.	Spring
-
-        b.	Summer
-
-        c.	Fall
-
-        d.	Winter
-
-*2.	Events*
-        a.	Rain
-
-=3 - Nice to have, but only if there’s time=
-*1.	Diseases*
-
-       a.	Animal Disease
-
-       b.	Plant Disease
-
-       c.	Terrain Disease(both animal and plant)
-
-*2.   Other Disasters/Events*
-
-       a.	Snowstorm
-
-       b.	Hurricane
-
-       c.	Drought
-
-       d.	Earthquake
 
 =Refined Version of Environments=
 *1.      Desert*
@@ -119,16 +70,13 @@ Marco Chin
 	The server shall take in and process requests, retrieve information from the database, and return the information back to the client. Server side shall have a clock and send disaster, season change, and disease responses to clients via the standard protocol. Since these changes can have an effect on environment score, the increased or decrease in biomass will be input into the simulation engine and return biomass of all species in the particular foodweb. High biomass will yield high environment score and vice-versa.
 	
 
-=2. Objects(subject to change)=
+=2. Classes(subject to change)=
 
 *NatureEventsController*
 
-	 public static String generateDisaster(int i)
+Retrieves data from NatureEventsDAO. 
+Sends a response to generate natural events for a certain number of tiles depending on a random formula.
 
-  Takes in a number and spits out a disaster(String). When client recieves the disaster
-  string "Fire" or "Flood", Unity should generate the disaster accordingly.
-  Database and Protocal members please use these classes to communicate between
-  database or client.
 
 *SeasonController*
 
