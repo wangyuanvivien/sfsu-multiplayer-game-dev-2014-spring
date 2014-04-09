@@ -81,23 +81,36 @@ Marco Chin
 *6. Sunshine*
 	
 
-=6. Classes(subject to change)=
+=6. Classes/Objects (subject to change)=
 
-*NatureEventsController*
+*1. NatureEventsController*
  * Retrieves data from NatureEventsDAO. 
  * Sends a response to generate natural events for a certain number of tiles depending on a random formula.
 
+ * *Methods*
+  * public void generateNatureEvent(Season season, int randomDay)
+  * public ResponseUpdateNaturalEvent setNatureEventResponse(ResponseUpdateNaturalEvent response, int[] tileList, NatureEvents natureEvent)
+  * public NatureEvents getNatureEvents(int i)
+  * public void send(ResponseUpdateNaturalEvent response)
 
 
-*SeasonController*
+*2. SeasonController*
  * Retrieves data from SeasonDAO.
  * Sends a response to client to change seasons every 3 months.
 
-*EnvironmentController*
+ * *Methods*
+  * public Season generateSeason(int monthNum)
+  * public Season getSeason(int i)
+  * public void send(ResponseUpdateNaturalEvent response)
+
+*3. EnvironmentController*
  * Retrieves data from EnvironmentTypesDAO. 
  * Sends a response to Client about environment type information.
 
-*DiseasesController*
+ * *Methods*
+  * public EnvironmentTypes getEnvironmentType(int i)
+
+*4. DiseasesController*
  * Diseases are priority 3, not yet implemented
  * Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
 
