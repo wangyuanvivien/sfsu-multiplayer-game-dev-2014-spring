@@ -14,9 +14,13 @@ As part of the Protocol team, we will implement a new Protocol which client will
 Request/response data transfer files on both the server and the client so that client is able to have updated data after server runs modifications of data due to certain activities
 
 RequestWorldData—Client requests current world information after player logs in
+
 ResponseWorldData—Collect world information and send to client
+
 RequestTile—Player clicks on a tile, client sends request for info on that tile
+
 ResponseTile—Server responds with tile information, may be stored client side and synced as needed with server database: species on tile, biomass of tile, owner of tile
+
 RequestEcosystem—Player looks up their or other players’ profile, client sends request to server
 ResponseEcosystem—Server responds with specified player’s ecosystem information: how many tiles in ecosystem, total number of species in ecosystem (fragmented and continuous)
 RequestBattle—Player engages in battle with another player
