@@ -1,15 +1,15 @@
 #labels TutorialTeam,ProtocolTeam
 Xuning Tian - Tutorial Team - Protocol Team
 
-Tutorial Team — Protocol
+==Tutorial Team — Protocol==
 
-Protocol requirements
+==Protocol requirements==
 
 Communicate with client and server member on what data they need to transfer by creating appropriate request/response files that transfer data between client and server in order to get essential ingredients to creating data visualizations.
 
 As part of the Protocol team, we will implement a new Protocol which client will use to communicate with the Server.
 
-Protocol Specifications:
+==Protocol Specifications:==
 
 Request/response data transfer files on both the server and the client so that client is able to have updated data after server runs modifications of data due to certain activities
 
