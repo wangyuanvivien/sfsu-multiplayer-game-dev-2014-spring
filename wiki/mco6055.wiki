@@ -61,7 +61,9 @@
  * a. Clean water, high water specie variety, low plant-life.
  * b. Vegetation Capacity: 300 - 400
  * c. Immune to Fire and Drought
+
 =4. Types of seasons=
+*(Seasons are global, every shares the same season)*
 
 *1. Spring*
  * a. Higher chance of rain, flooding, and sunshine.
@@ -77,6 +79,8 @@
  * a. Higher chance of snowstorm and rain.
 
 =5. Natural Events=
+*(Every will see the same natural events on the tile map)*
+
 *1. Flood*
  * a. Is an event that affects plants and larger land animals.  Trees are not affected.
  * b. This cannot be managed during its occurrence (have to let it run its course), and will have an icon representing it happening.
@@ -147,6 +151,9 @@
 *5. DiseasesController*
  * Diseases are priority 3, not yet implemented
  * Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
+
+*6. Other misc game logic*
+ * Server will send the current season and current occurring events to the client on login.
 
 =7. The Random Formula =
 (* formula is subject to change)
