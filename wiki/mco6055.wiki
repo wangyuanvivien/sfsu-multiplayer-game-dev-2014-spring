@@ -148,13 +148,25 @@
  * Diseases are priority 3, not yet implemented
  * Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
 
-=7. ATTENTION LOBBY AND BATTLE TEAM=
+=7. The Random Formula =
+(* formula is subject to change)
+ * Located inside the NatureEventsController
+ * 40% chance for natural events to occur once every month at a random time during that month.
+ * If natural events occur, exactly 2500 tiles will be affected (approx 15% of the map).
+ * The 2500 tiles will be chosen at random.
+ * The quantity for each type of event will depend on the current season. 
+
+ * For example:
+	Summer has a wildfire chance of 35%. This means 35% of the 2500 tiles will be affected by wildfire. 
+The remaining 65% of the tiles will be affected by other natural events.
+
+=8. ATTENTION LOBBY AND BATTLE TEAM=
  * Use my getByEnvironmentTypesID and getByNatureEventsID to retrieve info about Environment Types and Events from database. This will return an object representing a row in the db. 
  * You can access vegetation capacity, plant growth rates and animal repo rates from the returned object.
  * The generate methods ie. generateNatureEvent(Season season) sends information that is required by the client to generate the appropriate action. In this case generateNatureEvent() will send a array of tile ids and an event id. It is clients job to render the event for all the tile ids.
  
 
-=8. Milestones=
+=9. Milestones=
 By 4/8 Finish 	EnvironmentController, DisasterController, Random Formula
 
 By 5/6 Finish SeasonsController, DiseasesController, NaturalEventsTimer. Sync up db with server.
