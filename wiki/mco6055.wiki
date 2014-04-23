@@ -64,17 +64,17 @@
 =4. Types of seasons=
 
 *1. Spring*
- * a. Higher chance of rain/flooding
+ * a. Higher chance of rain, flooding, and sunshine.
 
 *2. Summer*
  * a. Higher chance of drought
  * b. Higher chance of wildfire
 
 *2. Fall*
- * a. Plant-life slowly decays
+ * a. Higher chance of tornadoes and floods.
 
 *3. Winter*
- * a. Slower build and growth rates
+ * a. Higher chance of snowstorm and rain.
 
 =5. Natural Events=
 *1. Flood*
@@ -94,7 +94,8 @@
 *5. Rain*
 
 *6. Sunshine*
-	
+
+*7. SnowStorm*	
 
 =6. Classes/Objects (subject to change)=
 
@@ -133,4 +134,4 @@
 =7. Milestones=
 By 4/8 Finish 	EnvironmentController, DisasterController, Random Formula
 
-By 5/6 Finish SeasonsController and DiseasesController
+By 5/6 Finish SeasonsController, DiseasesController, NaturalEventsTimer. Sync up db with server.
