@@ -133,6 +133,7 @@
   * public Season generateSeason(int monthNum)
   * public Season getBySeasonID(int i)
   * public Season getCurrentSeason()
+  * public void updateClientSeasonOnLogin(GameClient client) 
   * public void sendToAll(ResponseUpdateNaturalEvent response)
 
 *4. EnvironmentController*
@@ -147,7 +148,7 @@
  * Diseases are priority 3, not yet implemented
  * Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
 
-=7.ATTENTION LOBBY AND BATTLE TEAM=
+=7. ATTENTION LOBBY AND BATTLE TEAM=
  * Use my getByEnvironmentTypesID and getByNatureEventsID to retrieve info about Environment Types and Events from database. This will return an object representing a row in the db. 
  * You can access vegetation capacity, plant growth rates and animal repo rates from the returned object.
  * The generate methods ie. generateNatureEvent(Season season) sends information that is required by the client to generate the appropriate action. In this case generateNatureEvent() will send a array of tile ids and an event id. It is clients job to render the event for all the tile ids.
