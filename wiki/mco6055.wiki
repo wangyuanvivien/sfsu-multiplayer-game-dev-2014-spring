@@ -157,8 +157,7 @@
  * The quantity for each type of event will depend on the current season. 
 
  * For example:
-	Summer has a wildfire chance of 35%. This means 35% of the 2500 tiles will be affected by wildfire. 
-The remaining 65% of the tiles will be affected by other natural events.
+	Summer has a wildfire chance of 35%. This means 35% of the 2500 tiles will be affected by wildfire. The remaining 65% of the tiles will be affected by other natural events.
 
 =8. ATTENTION LOBBY AND BATTLE TEAM=
  * Use my getByEnvironmentTypesID and getByNatureEventsID to retrieve info about Environment Types and Events from database. This will return an object representing a row in the db. 
