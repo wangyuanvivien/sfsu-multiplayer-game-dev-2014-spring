@@ -79,7 +79,7 @@
  * a. Higher chance of snowstorm and rain.
 
 =5. Natural Events=
-*(Every will see the same natural events on the tile map)*
+*(Everyone will see the same natural events on the tile map)*
 
 *1. Flood*
  * a. Is an event that affects plants and larger land animals.  Trees are not affected.
