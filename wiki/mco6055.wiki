@@ -97,7 +97,7 @@
 
 *7. SnowStorm*	
 
-=6. Classes/Objects (subject to change)=
+=6. Classes/Deliverables (subject to change)=
 
 *1. NatureEventsTimer*
  * This thread is a global timer that gets started whenever the server is started. 
