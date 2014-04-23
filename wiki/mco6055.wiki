@@ -2,23 +2,38 @@
 =Natural Environment/ Server Team=
 
 =1. Requirements=
-*Server Requirements*
- * The server shall take in and process requests, retrieve information from the database, and return the information back to the client. Server side shall have a clock and send disaster, season change, and disease responses to clients via the standard protocol. 
+*Server Requirements for Natural Environment*
+ * The server shall take in and process requests, retrieve information from the database, and return the information(responses) back to the client via protocol. Server shall handle the game logic.
+
+ * Server side shall have a clock and send events, season changes, and disease responses to clients using a set interval that can be configure in Constants.java. 
 
  * Since these changes can have an effect on environment score, the increased or decrease in biomass will be input into the simulation engine and return biomass of all species in the particular foodweb. High biomass will yield high environment score and vice-versa. 
 
- * The server will also be in charge of deciding how to generate the random formula for creating events.
+ * The server shall also be in charge of deciding how to generate the random formula for creating events.
 
-*Natural Environment Requirements*
- * The game shall implement the use of types of environments, disasters, season changes, and diseases, listed in ascending priority. Animations, simulation and client-server data relating to natural environment will and shall be handled by our team.
+ * The server shall keep track of the current season and all of the current natural events currently deployed in the game, in the db.
+
+ * Information relating to environments, disasters etc will be stored in the database.
+
+
+*General Natural Environment Requirements*
+ * The game shall implement the use of types of environments, events, season changes, and diseases, listed in ascending priority. Animations, simulation and client-server data relating to natural environment will and shall be handled by our team. 
+
+ * Environments have different vegetation capacity ranges. Vegetation capacity shall be determined by us and would depend on the values of the environment type specified by the db. 
+
+ * Seasons will only affect the occurrence ratio of the natural events, while the natural events will affect the growth rates of plants and animals.
+
+ * A natural environment month is separate from a game month!(For example: If a season changes, it doesn't mean necessarily that 3 months have passed in the ecosystem.) We are using our own timer to generate seasons and natural events. 
 
 
 =2. Priorities=
  * *Priority 1*
+  * Natural Event Timer
   * Environment Types: Desert, Jungle, Grasslands, Arctic
    * EnvironmentController
-  * Natural Events: Drought, WildFire, Flood, Tornado, Rain, Sunshine
+  * Natural Events: Drought, WildFire, Flood, Tornado, Rain, Sunshine, SnowStorm
    * NatureEventsController
+  * Random Formula to generate natural events.
  
  * *Priority 2*
   * Seasons: Spring, Summer, Fall, Winter
@@ -31,25 +46,25 @@
 =3. Types of Environments=
 *1.      Desert*
  * a. Is dry and has a limited water supply.  Only certain plants and animals can survive here.
- * b. Vegetation Capacity: 200
+ * b. Vegetation Capacity: 300 - 500
+ * c. Immune to Flood and SnowStorm
 
 *2.	Jungle*
  * a. A very diverse biome filled with water and plants.  Very hard to maintain, as the diversity can cause difficulty in balancing.
- * b. Vegetation Capacity: 800
+ * b. Vegetation Capacity: 800 - 1000
 
 *3.	Grasslands*
  * a. Good plant-life, and fair diversity.  Water is clean, and is the more balanced biome overall.  Easy to maintain and disrupt the balance.
- * b. Vegetation Capacity: 1000
+ * b. Vegetation Capacity: 600 - 800
 
 *4.	Arctic*
  * a. Clean water, high water specie variety, low plant-life.
- * b. Vegetation Capacity: 400
-
+ * b. Vegetation Capacity: 300 - 400
+ * c. Immune to Fire and Drought
 =4. Types of seasons=
 
 *1. Spring*
  * a. Higher chance of rain/flooding
- * b. Higher rate of plant growth
 
 *2. Summer*
  * a. Higher chance of drought
