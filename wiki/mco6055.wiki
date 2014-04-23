@@ -99,39 +99,61 @@
 
 =6. Classes/Objects (subject to change)=
 
-*1. NatureEventsController*
+*1. NatureEventsTimer*
+ * This thread is a global timer that gets started whenever the server is started. 
+ * All players share this timer.
+ * Occurrence of Seasons and Naturals Events are based off this timer.
+ * A natural event month is different from a game month (same with season and year).
+
+ * *Current Time Configurations:*
+  * A natural event month is 1800 seconds which is 30 min.
+  * A natural event season is 5400 secs (1 hr 30 min).
+  * A natural event year is 21600 secs (6 hr).
+
+ * *Methods*
+  * run()
+
+*2. NatureEventsController*
  * Retrieves data from NatureEventsDAO. 
  * Sends a response to generate natural events for a certain number of tiles depending on a random formula.
 
  * *Methods*
-  * public void generateNatureEvent(Season season, int randomDay)
-  * public ResponseUpdateNaturalEvent setNatureEventResponse(ResponseUpdateNaturalEvent response, int[] tileList, NatureEvents natureEvent)
-  * public NatureEvents getNatureEvents(int i)
-  * public void send(ResponseUpdateNaturalEvent response)
+  * public void generateNatureEvent(Season season)
+  * public void setTilesForNatureEvent(float eventChance, int eventTilesAmnt, int[] eventTileList, int eventID)
+  * public NatureEvents getByNatureEventsID(int i)
+  * public void updateClientNaturalEventsOnLogin(GameClient client)
+  * public void sendToAll(ResponseUpdateNaturalEvent response)
 
 
-*2. SeasonController*
+*3. SeasonController*
  * Retrieves data from SeasonDAO.
  * Sends a response to client to change seasons every 3 months.
 
  * *Methods*
   * public Season generateSeason(int monthNum)
-  * public Season getSeason(int i)
-  * public void send(ResponseUpdateNaturalEvent response)
+  * public Season getBySeasonID(int i)
+  * public Season getCurrentSeason()
+  * public void sendToAll(ResponseUpdateNaturalEvent response)
 
-*3. EnvironmentController*
+*4. EnvironmentController*
  * Retrieves data from EnvironmentTypesDAO. 
  * Sends a response to Client about environment type information.
 
  * *Methods*
-  * public EnvironmentTypes getEnvironmentType(int i)
+  * public EnvironmentTypes generateEnvironmentType(int envID)
+  * public EnvironmentTypes getByEnvironmentTypesID(int i)
 
-*4. DiseasesController*
+*5. DiseasesController*
  * Diseases are priority 3, not yet implemented
  * Animal Disease, Plant Diesase, Terrain Disease(both animal and plant)
 
+=7.ATTENTION LOBBY AND BATTLE TEAM=
+ * Use my getByEnvironmentTypesID and getByNatureEventsID to retrieve info about Environment Types and Events from database. This will return an object representing a row in the db. 
+ * You can access vegetation capacity, plant growth rates and animal repo rates from the returned object.
+ * The generate methods ie. generateNatureEvent(Season season) sends information that is required by the client to generate the appropriate action. In this case generateNatureEvent() will send a array of tile ids and an event id. It is clients job to render the event for all the tile ids.
+ 
 
-=7. Milestones=
+=8. Milestones=
 By 4/8 Finish 	EnvironmentController, DisasterController, Random Formula
 
 By 5/6 Finish SeasonsController, DiseasesController, NaturalEventsTimer. Sync up db with server.
