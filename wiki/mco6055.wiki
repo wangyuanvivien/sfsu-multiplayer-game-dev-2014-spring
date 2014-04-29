@@ -107,15 +107,19 @@
  * This thread is a global timer that gets started whenever the server is started. 
  * All players share this timer.
  * Occurrence of Seasons and Naturals Events are based off this timer.
- * A natural event month is different from a game month (same with season and year).
 
  * *Current Time Configurations:*
-  * A natural event month is 1800 seconds which is 30 min.
-  * A natural event season is 5400 secs (1 hr 30 min).
-  * A natural event year is 21600 secs (6 hr).
+  * A day is 5 seconds.
+  * A month is 150 secs (2min 30secs).
+  * A season is 450 secs (7min 30secs)
+  * A natural event year is 1800 secs (30 min).
 
  * *Methods*
-  * run()
+  * public void run()
+  * public int getSeasonNum();
+  * public int getMonthNum();
+  * public int getDayNum();
+  * public void updateClientTimeOnLogin();
 
 *2. NatureEventsController*
  * Retrieves data from NatureEventsDAO. 
@@ -125,7 +129,6 @@
   * public void generateNatureEvent(Season season)
   * public void setTilesForNatureEvent(float eventChance, int eventTilesAmnt, int[] eventTileList, int eventID)
   * public NatureEvents getByNatureEventsID(int i)
-  * public void updateClientNaturalEventsOnLogin(GameClient client)
   * public void sendToAll(ResponseUpdateNaturalEvent response)
 
 
@@ -137,7 +140,6 @@
   * public Season generateSeason(int monthNum)
   * public Season getBySeasonID(int i)
   * public Season getCurrentSeason()
-  * public void updateClientSeasonOnLogin(GameClient client) 
   * public void sendToAll(ResponseUpdateNaturalEvent response)
 
 *4. EnvironmentController*
