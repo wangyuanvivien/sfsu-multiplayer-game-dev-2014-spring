@@ -112,7 +112,7 @@
   * A day is 5 seconds.
   * A month is 150 secs (2min 30secs).
   * A season is 450 secs (7min 30secs)
-  * A natural event year is 1800 secs (30 min).
+  * A year is 1800 secs (30 min).
 
  * *Methods*
   * public void run()
