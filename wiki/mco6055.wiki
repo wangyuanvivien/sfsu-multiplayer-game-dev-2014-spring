@@ -160,8 +160,8 @@
 =7. The Random Formula =
 (* formula is subject to change)
  * Located inside the NatureEventsController
- * 40% chance for natural events to occur once every month at a random time during that month.
- * If natural events occur, exactly 2500 tiles will be affected (approx 15% of the map).
+ * 15% chance for natural events to occur once every month at a random time during that month.
+ * If natural events occur, exactly 2500 tiles will be affected (approx 15% of the map), unless tiles are immune to a certain event.
  * The 2500 tiles will be chosen at random.
  * The quantity for each type of event will depend on the current season. 
 
