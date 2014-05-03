@@ -1,4 +1,4 @@
-=Marco Chin (last edited 5/01/2014)=
+=Marco Chin (last edited 5/02/2014)=
 =Natural Environment/ Server Team=
 
 =1. Requirements=
@@ -177,6 +177,6 @@
  
 
 =9. Milestones=
-By 4/8 Finish 	EnvironmentController, DisasterController, Random Formula
+By 4/8 Finish 	EnvironmentController, DisasterController, SeasonsController, Random Formula
 
-By 5/6 Finish SeasonsController, DiseasesController, NaturalEventsTimer. Sync up db with server.
+By 5/6 Get client integrated with server code. Run tests to see if protocols and db is working smoothly with server.
