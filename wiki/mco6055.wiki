@@ -3,17 +3,17 @@
 
 =1. Requirements=
 *Server Requirements for Natural Environment*
- * The server shall take in and process requests, retrieve information from the database, and return the information(responses) back to the client via protocol. Server shall handle the game logic.
+ * The server shall take in and process requests, retrieve information from the database, and return the information(responses) back to the client via protocol. Server shall handle the game logic. Game logic includes what, where, and how events are generated.
 
  * Server side shall have a clock and send events, season changes, and disease responses to clients using a set interval that can be configure in Constants.java. 
 
- * Since these changes can have an effect on environment score, the increased or decrease in biomass will be input into the simulation engine and return biomass of all species in the particular foodweb. High biomass will yield high environment score and vice-versa. 
+ * Since these changes can have an effect on environment score, the increased or decrease in biomass shall be input into the simulation engine and return biomass of all species in the particular foodweb. High biomass will yield high environment score and vice-versa. 
 
  * The server shall also be in charge of deciding how to generate the random formula for creating events.
 
  * The server shall keep track of the current season and all of the current natural events currently deployed in the game, in the db.
 
- * Information relating to environments, disasters etc will be stored in the database.
+ * Information relating to environments, disasters etc shall be stored in the database.
 
 
 *General Natural Environment Requirements*
@@ -131,6 +131,7 @@
   * public NatureEvents getByNatureEventsID(int i)
   * public void removeEventFromTileByUser(int[] tilesToBeRemoved)
   * public void removeEventFromTileByDefault(int eventID)
+  * public void triggerNaturalEventSimulations()
   * public void sendToAll(ResponseUpdateNaturalEvent response)
 
 *3. SeasonController*
@@ -161,7 +162,7 @@
 =7. The Random Formula =
 (* formula is subject to change)
  * Located inside the NatureEventsController
- * 15% chance for natural events to occur once every month at a random time during that month.
+ * 40% chance for natural events to occur once every month at a random time during that month.
  * If natural events occur, exactly 2500 tiles will be affected (approx 15% of the map), unless tiles are immune to a certain event.
  * The 2500 tiles will be chosen at random.
  * The quantity for each type of event will depend on the current season. 
